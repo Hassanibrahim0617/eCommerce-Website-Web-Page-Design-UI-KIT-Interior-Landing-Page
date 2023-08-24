@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "Ibrahim Hassan",
   "license": "MIT",
-  "description": "",
+  "description": "javascript special mentor project",
   "devDependencies": {
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
@@ -17,5 +17,13 @@
   },
   "dependencies": {
     "json-server": "^0.17.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hassanibrahim0617/eCommerce-Website-Web-Page-Design-UI-KIT-Interior-Landing-Page.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hassanibrahim0617/eCommerce-Website-Web-Page-Design-UI-KIT-Interior-Landing-Page/issues"
+  },
+  "homepage": "https://github.com/Hassanibrahim0617/eCommerce-Website-Web-Page-Design-UI-KIT-Interior-Landing-Page#readme"
 }
