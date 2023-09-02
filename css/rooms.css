@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg {
+  background: #fcf8f3;
+  width: 1440px;
+  height: 670px;
+  position: relative;
+  display: flex;
+}
+.fifty-plus {
+  padding-left: 3.25rem;
+  padding-top: 9.97rem;
+  /* padding-bottom: 6.94rem; */
+}
+.title {
+  color: var(--color-gray-1, #3a3a3a);
+  text-align: left;
+  font: 700 40px/120% "Poppins", sans-serif;
+  position: relative;
+  width: 422px;
+}
+.subtitle {
+  color: var(--color-gray-2, #616161);
+  text-align: left;
+  font: 500 16px/150% "Poppins", sans-serif;
+  position: relative;
+  width: 368px;
+  padding-bottom: 1rem;
+}
+.rectangle-3 {
+  background: var(--primary, #b88e2f);
+  width: 176px;
+  height: 48px;
+  position: relative;
+}
+.explore-more {
+  color: var(--color-white, #ffffff);
+  text-align: left;
+  font: 600 16px/150% "Poppins", sans-serif;
+  position: relative;
+
+  margin-left: 2rem;
+  /* margin-top: 0.75rem; */
+  margin-right: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.images {
+  display: flex;
+  margin-top: 2.7rem;
+  margin-bottom: 2.7rem;
+}
+.img {
+  padding-left: 1.5rem;
+}
+.rectangle-24 {
+  width: 404px;
+  height: 582px;
+  position: relative;
+}
+
+/* .twentynine-twentyeight {
+  display: flex;
+} */
+/* .rectangle-29 {
+  background: rgba(255, 255, 255, 0.72);
+  width: 217px;
+  height: 130px;
+  position: relative;
+  backdrop-filter: blur(1.5px);
+} */
+
+/* .rectangle-28 {
+  background: var(--primary, #b88e2f);
+  width: 48px;
+  height: 48px;
+  position: relative;
+} */
+
+.rectangle-25 {
+  width: 372px;
+  height: 486px;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.indicator {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.active {
+  flex-shrink: 0;
+  width: 27px;
+  height: 27px;
+  position: static;
+}
+.ellipse-2 {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: var(--primary, #b88e2f);
+  border-width: 1px;
+  opacity: 0.699999988079071;
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.ellipse-1 {
+  background: var(--primary, #b88e2f);
+  border-radius: 50%;
+  border-style: solid;
+  border-color: var(--primary, #b88e2f);
+  border-width: 1px;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+.ellipse-12 {
+  background: var(--color-gray-5, #d8d8d8);
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 11px;
+  height: 11px;
+  position: relative;
+}
+.ellipse-22 {
+  background: var(--color-gray-5, #d8d8d8);
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 11px;
+  height: 11px;
+  position: relative;
+}
+.ellipse-3 {
+  background: var(--color-gray-5, #d8d8d8);
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 11px;
+  height: 11px;
+  position: relative;
+}
+
+/* .rectangle-26 {
+  width: 372px;
+  height: 486px;
+  position: relative;
+} */
+
+/* SHARE SECTION  */
+
+.share {
+  position: absolute;
+  inset: 0;
+}
+.images {
+  width: 1799px;
+  height: 721px;
+  position: static;
+}
+.rectangle-35 {
+  background: #c4c4c4;
+  width: 274px;
+  height: 312px;
+  position: absolute;
+  left: -196px;
+  top: 3559px;
+}
+.rectangle-36 {
+  width: 274px;
+  height: 382px;
+  position: absolute;
+  left: -196px;
+  top: 3559px;
+}
+.rectangle-38 {
+  width: 451px;
+  height: 312px;
+  position: absolute;
+  left: 94px;
+  top: 3629px;
+}
+.rectangle-40 {
+  width: 295px;
+  height: 392px;
+  position: absolute;
+  left: 561px;
+  top: 3715px;
+}
+.rectangle-39 {
+  width: 344px;
+  height: 242px;
+  position: absolute;
+  left: 201px;
+  top: 3957px;
+}
+.rectangle-41 {
+  width: 178px;
+  height: 242px;
+  position: absolute;
+  left: 872px;
+  top: 4022px;
+}
+.rectangle-44 {
+  width: 258px;
+  height: 196px;
+  position: absolute;
+  left: 1066px;
+  top: 4022px;
+}
+.rectangle-43 {
+  width: 290px;
+  height: 348px;
+  position: absolute;
+  left: 872px;
+  top: 3658px;
+}
+.rectangle-45 {
+  width: 425px;
+  height: 433px;
+  position: absolute;
+  left: 1178px;
+  top: 3573px;
+}
+.rectangle-37 {
+  width: 381px;
+  height: 323px;
+  position: absolute;
+  left: -196px;
+  top: 3957px;
+}
+.title {
+  width: 356px;
+  height: 86px;
+  position: static;
+}
+.title2 {
+  color: var(--color-gray-2, #616161);
+  text-align: center;
+  font: 600 20px/150% "Poppins", sans-serif;
+  position: absolute;
+  left: 592px;
+  top: 3500px;
+}
+.title3 {
+  color: var(--color-gray-1, #3a3a3a);
+  text-align: center;
+  font: 700 40px/120% "Poppins", sans-serif;
+  position: absolute;
+  left: 525px;
+  top: 3538px;
+}
