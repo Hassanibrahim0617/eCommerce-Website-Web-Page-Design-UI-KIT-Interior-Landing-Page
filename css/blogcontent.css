@@ -142,6 +142,7 @@ nav .right img {
 }
 
 /* MAIN CONTAINER */
+
 .blogcontent {
     max-width: 80%;
     margin: 5rem;
@@ -158,7 +159,7 @@ nav .right img {
 }
 
 .blog-img {
-    width: 100%;
+    width: 80%;
 }
 
 .leftsmall {
@@ -194,8 +195,8 @@ nav .right img {
     Line-height: 22.5px;
     width: 98.8%;
 }
-
-button{
+#Back{
+    margin: 0 0 2rem 5rem;
     background: #f9f1e7;
     border-radius: 10px;
     width: 90px;
@@ -206,8 +207,9 @@ button{
     font-size: 20px;
     font-weight: 400;
     cursor: pointer;
+    
 }
-button:active {
+#Back:active {
     background-color: #B88E2F;
 }
 
@@ -552,8 +554,8 @@ button:active {
     width: 200px;
     height: 0px;
     position: absolute;
-    left: 1005.01px;
-    top: 90px;
+    left: 993.01px;
+    top: 78px;
     transform-origin: 0 0;
     transform: rotate(0deg) scale(1, 1);
 }
@@ -575,8 +577,8 @@ button:active {
     width: 75.01px;
     height: 0px;
     position: absolute;
-    left: 1224px;
-    top: 90px;
+    left: 1204px;
+    top: 78px;
 }
 
 .group-44 {

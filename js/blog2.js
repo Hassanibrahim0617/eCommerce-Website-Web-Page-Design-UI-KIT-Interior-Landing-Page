@@ -20,7 +20,7 @@ searchImage.addEventListener("submit", async(e)=>{
 
 const blogContentWrapper = async () =>{
     try{
-        let blogData = `http://localhost:3000/blog`;
+        let blogData = `http://localhost:3000/blog2`;
         const response = await fetch(blogData)
         const blogContentWrapper = await response.json()
 

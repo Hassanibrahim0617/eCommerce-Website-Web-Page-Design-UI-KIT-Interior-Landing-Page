@@ -292,6 +292,9 @@ form input {
     height: 24px;
     cursor: pointer;
 }
+.searchimage:hover{
+    color: #B88E2F;
+}
 
 .rightcatalog {
     margin: 0 1.5rem;
