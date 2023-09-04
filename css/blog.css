@@ -748,6 +748,12 @@ text-align: left;
     top: 90px;
 }
 
+small {
+    color: #f20b0b;
+    font-size: 14px;
+    font-weight: 300;
+}
+
 .group-44 {
     width: 1240.01px;
     height: 59px;

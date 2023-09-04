@@ -5,6 +5,8 @@ const footerForm = document.querySelector('.footer-form');
 const smallMsg = document.querySelector('small');
 const smallFormMsg = document.querySelector('.small');
 console.log(smallFormMsg)
+
+// FORM INFORMATION VALIDATION
 formInput.addEventListener('submit', (e) => {
     e.preventDefault();
 

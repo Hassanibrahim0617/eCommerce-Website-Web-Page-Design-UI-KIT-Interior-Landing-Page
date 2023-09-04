@@ -1,7 +1,7 @@
 
 const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
-const formPayment = document.querySelectorAll('form');
+const formPayment = document.querySelector('forminput');
 const countryRegion = document.querySelector(".rectangle-539")
 const firstname = document.querySelector('.rectangle-53');
 const lastname = document.querySelector('.rectangle-532');
@@ -14,48 +14,41 @@ const town = document.querySelector('.rectangle-535');
 const bankTransfer = document.querySelector('#ellipse-12');
 const directBank = document.querySelector('#ellipse-13');
 const displayError = ''
-footerForm = document.querySelector('.footre-form')
+const footerForm = document.querySelector('.footer-form');
+const smallMsg = document.querySelector('small');
 
-formPayment.forEach(forms => {
-    forms.addEventListener('submit', async (e) => {
+
+    formPayment.addEventListener('submit', (e) => {
         try {
             e.preventDefault()
             if (
-                firstname.value.trim() === '' ||
-                lastname.value.trim() === '' ||
-                companyName.value.trim() === '' ||
-                streetAddress - address.value.trim() === '' ||
-                zipCode.value.trim() === '' ||
-                town.value.trim() === '' ||
-                phoneNumber.value.trim() === '' ||
-                emailAddress.value.trim() === '' ||
-                countryRegion.value.trim() === '' ||
-                bankTransfer.value === '' ||
-                directBank.value === ''
+                e.currentTarget.firstname.value.trim() === '' ||
+                e.currentTarget.lastname.value.trim() === '' ||
+                e.currentTarget.companyName.value.trim() === '' ||
+                e.currentTarget.streetAddress - address.value.trim() === '' ||
+                e.currentTarget.zipCode.value.trim() === '' ||
+                e.currentTarget.town.value.trim() === '' ||
+                e.currentTarget.phoneNumber.value.trim() === '' ||
+                e.currentTarget.emailAddress.value.trim() === '' ||
+                e.currentTarget.countryRegion.value.trim() === '' ||
+                e.currentTarget.bankTransfer.value === '' ||
+                e.currentTarget.directBank.value === ''
             ) {
+
                 displayError.textContent = 'fill this space';
-                console.log(forms)
+                
             } else {
                 displayError.textContent = 'click on the place order';
             }
           
-            let formData = new FormData(forms);
+            let formData = new FormData(formPayment);
             let formDataObj = Object.fromEntries(formData);
             localStorage.setItem("input", JSON.stringify(formDataObj));
 
-//             footerForm.addEventListener('submit',(event)=>{
-// event.preventDefault()
-// console.log(footerForm)
-// let footerFormData = new FormData(footerForm);
-//             let formDataObj = Object.fromEntries(footerFormData);
-//             localStorage.setItem("input", JSON.stringify(formDataObj));
-// })
-
         } catch (error) {
             console.log(error)
-        }
-    })
-});
+        };
+    });
 
 let countriesName = ` http://localhost:3000/countries`
 const country = async () => {
@@ -75,7 +68,40 @@ const country = async () => {
     } catch (error) {
         console.log(error)
     }
-}
+};
+
+//  FOOTER FORM
+footerForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    if (e.currentTarget.emailaddress.value.trim() === '') {
+        smallMsg.textContent = 'Please enter your valid email address';
+        setTimeout(function () {
+            smallMsg.style.display = 'none';
+            window.location = './contact.html';
+        }, 3000);
+    }
+    else if (!e.currentTarget.emailaddress.value.trim() === '') {
+
+        smallMsg.textContent = 'email address is not valid';
+        setTimeout(function () {
+            smallMsg.style.display = 'none';
+            window.location = './contact.html';
+        }, 3000);
+    } else {
+        smallMsg.style.color = 'green';
+        smallMsg.textContent = 'succes!';
+
+    };
+
+    let footerEmail = new FormData(footerForm);
+    let subscribeMail = Object.fromEntries(footerEmail);
+    localStorage.setItem('mail', JSON.stringify(subscribeMail));
+});
+
+function isValidMail(emailaddress) {
+    /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailaddress);
+};
+
 
 // FOOTER LI 1
 
