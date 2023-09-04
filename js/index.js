@@ -1,8 +1,9 @@
 const imageContent = document.querySelector('.heading_image');
 
-let fetchImage = `http://localhost:3000/headingImages`;
+
 
 const imageDisplay = async () =>{
+  let fetchImage = `http://localhost:3000/headingImages`;
 try{
 const response = await fetch(fetchImage)
 const imageDisplay = await response.json()

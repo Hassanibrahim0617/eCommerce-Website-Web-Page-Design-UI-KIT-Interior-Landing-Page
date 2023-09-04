@@ -12,11 +12,12 @@ const buttonNext = document.querySelector('.next');
 searchImage.addEventListener("submit", async(e)=>{
     try{
         e.preventDefault()
+     
     }catch(error){
         console.log(error)
     };
 });
-
+console.log(searchImage)
 
 const blogContentWrapper = async () =>{
     try{
@@ -132,7 +133,7 @@ const posts = async () =>{
                         </div>
                     </div>
             `
-            // console.log(typeof span)
+           
             rightPost.innerHTML = container;
            
         })
