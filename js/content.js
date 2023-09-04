@@ -3,7 +3,8 @@ const singleblog = new URLSearchParams(window.location.search).get('id');
 const blogContent = document.querySelector('.blogcontent');
 const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
-
+const footerForm = document.querySelector('.footer-form');
+const smallMsg = document.querySelector('small');
 
 let url = `http://localhost:3000/blog/${singleblog}`;
 
@@ -80,7 +81,37 @@ const postlists = async () => {
 };
 
 
+// FOOTER FORM
+footerForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    if (e.currentTarget.emailaddress.value.trim() === '') {
+        smallMsg.textContent = 'Please enter your valid email address';
+        setTimeout(function () {
+            smallMsg.style.display = 'none';
+            window.location = './contact.html'
+        }, 3000);
+    }
+    else if (!e.currentTarget.emailaddress.value.trim() === '') {
 
+        smallMsg.textContent = 'email address is not valid';
+        setTimeout(function () {
+            smallMsg.style.display = 'none';
+            window.location = './contact.html'
+        }, 3000);
+    } else {
+        smallMsg.style.color = 'green';
+        smallMsg.textContent = 'succes!';
+
+    };
+
+    let footerEmail = new FormData(footerForm);
+    let subscribeMail = Object.fromEntries(footerEmail);
+    localStorage.setItem('mail', JSON.stringify(subscribeMail));
+});
+
+function isValidMail(emailaddress) {
+    /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailaddress);
+};
 
 
 // FOOTER LI 2

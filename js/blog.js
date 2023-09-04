@@ -8,6 +8,8 @@ const button1 = document.querySelector('.one');
 const button2 = document.querySelector('.two');
 const button3 = document.querySelector('.three');
 const buttonNext = document.querySelector('.next');
+const footerForm = document.querySelector('.footer-form');
+const smallMsg = document.querySelector('small');
 
 searchImage.addEventListener("submit", async(e)=>{
     try{
@@ -143,7 +145,37 @@ const posts = async () =>{
 };
 
 
+// FOOTER FORM
+footerForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    if (e.currentTarget.emailaddress.value.trim() === '') {
+        smallMsg.textContent = 'Please enter your valid email address';
+        setTimeout(function () {
+            smallMsg.style.display = 'none';
+            window.location = './contact.html'
+        }, 3000);
+    }
+    else if (!e.currentTarget.emailaddress.value.trim() === '') {
 
+        smallMsg.textContent = 'email address is not valid';
+        setTimeout(function () {
+            smallMsg.style.display = 'none';
+            window.location = './contact.html'
+        }, 3000);
+    } else {
+        smallMsg.style.color = 'green';
+        smallMsg.textContent = 'succes!';
+
+    };
+
+    let footerEmail = new FormData(footerForm);
+    let subscribeMail = Object.fromEntries(footerEmail);
+    localStorage.setItem('mail', JSON.stringify(subscribeMail));
+});
+
+function isValidMail(emailaddress) {
+    /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailaddress);
+};
 
 
 
