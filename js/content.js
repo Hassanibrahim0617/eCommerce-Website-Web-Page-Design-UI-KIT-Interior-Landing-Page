@@ -11,7 +11,7 @@ fetch(url).then(function (response) {
     return response.json()
  }).then(function (blog) {
     let elemDiv = '';
-    let {id, title, body, link, image, category:{portfolio, store}, date:{calender, availability}, personel:{name, statute}} = blog;
+    let {id, title, body,  image, category:{portfolio, store}, date:{calender, availability}, personel:{name, statute}} = blog;
            
     elemDiv += `
         <div class="blogcontainer">
@@ -53,7 +53,7 @@ fetch(url).then(function (response) {
         window.location = './blog.html';
     });
 
- });
+ }).catch((error)=>console.log(error));
 
  // FOOTER LI 1
 
