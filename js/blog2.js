@@ -151,7 +151,7 @@ footerForm.addEventListener('submit', (e) => {
         smallMsg.textContent = 'Please enter your valid email address';
         setTimeout(function () {
             smallMsg.style.display = 'none';
-            window.location = './contact.html'
+            window.location = './blog2.html'
         }, 3000);
     }
     else if (!e.currentTarget.emailaddress.value.trim() === '') {
@@ -159,17 +159,23 @@ footerForm.addEventListener('submit', (e) => {
         smallMsg.textContent = 'email address is not valid';
         setTimeout(function () {
             smallMsg.style.display = 'none';
-            window.location = './contact.html'
+            window.location = './blg2.html'
         }, 3000);
     } else {
         smallMsg.style.color = 'green';
-        smallMsg.textContent = 'succes!';
+        smallMsg.textContent = 'success!';
 
     };
 
     let footerEmail = new FormData(footerForm);
     let subscribeMail = Object.fromEntries(footerEmail);
     localStorage.setItem('mail', JSON.stringify(subscribeMail));
+
+    fetch(`http://localhost:3000/subscribeMail`, {
+        method: 'POST',
+        body: JSON.stringify(subscribeMail),
+        headers: { 'content-type': 'application/json' }
+    });
 });
 
 function isValidMail(emailaddress) {

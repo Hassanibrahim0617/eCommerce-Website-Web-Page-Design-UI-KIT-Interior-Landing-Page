@@ -1,7 +1,7 @@
 
 const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
-const formPayment = document.querySelector('forminput');
+const formPayment = document.querySelector('.forminput');
 const countryRegion = document.querySelector(".rectangle-539")
 const firstname = document.querySelector('.rectangle-53');
 const lastname = document.querySelector('.rectangle-532');
@@ -13,42 +13,55 @@ const emailAddress = document.querySelector('.rectangle-537');
 const town = document.querySelector('.rectangle-535');
 const bankTransfer = document.querySelector('#ellipse-12');
 const directBank = document.querySelector('#ellipse-13');
-const displayError = ''
+const displayError = document.querySelector('.small');
 const footerForm = document.querySelector('.footer-form');
 const smallMsg = document.querySelector('small');
 
 
-    formPayment.addEventListener('submit', (e) => {
-        try {
-            e.preventDefault()
-            if (
-                e.currentTarget.firstname.value.trim() === '' ||
-                e.currentTarget.lastname.value.trim() === '' ||
-                e.currentTarget.companyName.value.trim() === '' ||
-                e.currentTarget.streetAddress - address.value.trim() === '' ||
-                e.currentTarget.zipCode.value.trim() === '' ||
-                e.currentTarget.town.value.trim() === '' ||
-                e.currentTarget.phoneNumber.value.trim() === '' ||
-                e.currentTarget.emailAddress.value.trim() === '' ||
-                e.currentTarget.countryRegion.value.trim() === '' ||
-                e.currentTarget.bankTransfer.value === '' ||
-                e.currentTarget.directBank.value === ''
-            ) {
+formPayment.addEventListener('submit', (e) => {
+    try {
+        e.preventDefault()
+        if (
+            e.currentTarget.firstname.value.trim() === '' ||
+            e.currentTarget.lastname.value.trim() === '' ||
+            e.currentTarget.country.value.trim() === '' ||
+            e.currentTarget.companyname.value.trim() === '' ||
+            e.currentTarget.address.value.trim() === '' ||
+            e.currentTarget.zipcode.value.trim() === '' ||
+            e.currentTarget.town.value.trim() === '' ||
+            e.currentTarget.phonenumber.value.trim() === '' ||
+            e.currentTarget.email.value.trim() === '' ||
+            e.currentTarget.province.value.trim() === '' ||
+            e.currentTarget.information.value.trim() === '' ||
+            e.currentTarget.bankTransfer.value === '' ||
+            e.currentTarget.directBank.value === ''
+        ) {
 
-                displayError.textContent = 'fill this space';
-                
-            } else {
-                displayError.textContent = 'click on the place order';
-            }
-          
-            let formData = new FormData(formPayment);
-            let formDataObj = Object.fromEntries(formData);
-            localStorage.setItem("input", JSON.stringify(formDataObj));
+            displayError.textContent = 'Fill the apropriate information';
+            setTimeout(function () {
+                displayError.style.display = 'none';
+                window.location = ' ./checkout.html'
+            }, 3000);
 
-        } catch (error) {
-            console.log(error)
-        };
-    });
+        } else {
+            displayError.style.color = 'green';
+            displayError.textContent = 'successful';
+        }
+
+        let formData = new FormData(formPayment);
+        let formDataObj = Object.fromEntries(formData);
+        localStorage.setItem("input", JSON.stringify(formDataObj));
+
+        fetch(`http://localhost:3000/checkout`, {
+            method: 'POST',
+            body: JSON.stringify(formDataObj),
+            headers: { 'content-type': 'application/json' }
+        })
+
+    } catch (error) {
+        console.log(error)
+    };
+});
 
 let countriesName = ` http://localhost:3000/countries`
 const country = async () => {
@@ -77,7 +90,7 @@ footerForm.addEventListener('submit', (e) => {
         smallMsg.textContent = 'Please enter your valid email address';
         setTimeout(function () {
             smallMsg.style.display = 'none';
-            window.location = './contact.html';
+            window.location = './checkout.html';
         }, 3000);
     }
     else if (!e.currentTarget.emailaddress.value.trim() === '') {
@@ -85,17 +98,23 @@ footerForm.addEventListener('submit', (e) => {
         smallMsg.textContent = 'email address is not valid';
         setTimeout(function () {
             smallMsg.style.display = 'none';
-            window.location = './contact.html';
+            window.location = './checkout.html';
         }, 3000);
     } else {
         smallMsg.style.color = 'green';
-        smallMsg.textContent = 'succes!';
+        smallMsg.textContent = 'success!';
 
     };
 
     let footerEmail = new FormData(footerForm);
     let subscribeMail = Object.fromEntries(footerEmail);
     localStorage.setItem('mail', JSON.stringify(subscribeMail));
+
+    fetch(`http://localhost:3000/subscribeMail`, {
+        method: 'POST',
+        body: JSON.stringify(subscribeMail),
+        headers: { 'content-type': 'application/json' }
+    });
 });
 
 function isValidMail(emailaddress) {
@@ -156,5 +175,5 @@ const postlists2 = async () => {
 
 
 
-window.addEventListener('DOMContentLoaded', async () => postlists())
-window.addEventListener('DOMContentLoaded', async () => postlists2())
+window.addEventListener('DOMContentLoaded', async () => postlists());
+window.addEventListener('DOMContentLoaded', async () => postlists2());

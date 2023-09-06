@@ -170,6 +170,8 @@ nav .right img {
   width: 212px;
   height: 121px;
   position: static;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .forminput input {
@@ -748,6 +750,12 @@ nav .right img {
   margin-right: 10px;
   width: 14px;
   height: 14px;
+}
+
+.small {
+  color: #f20b0b;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 /* FRAME */
