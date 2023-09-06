@@ -27,14 +27,57 @@ console.log(error)
 
 
 
-// PRODUCT
-// let productsElem = '';
-// products.forEach((product)=>{
-//     productsElem +=`
-    
-//     `
-// })
+            /*PRODUCT SECTION*/
+const productFrame = document.querySelector('#product-wrapper .product-frame');
 
+      
+  const products = async () =>{
+    try{
+        let productData =` http://localhost:3000/ourProduct`;
+        
+            const response = await fetch(productData);
+            const products = await response.json();
 
+                let productsElem ="";
+                products.forEach((product) => {
+                    let {image, title, body, initialPrice, discountedPrice, newProduct, percentage} = product;
+                        
+                        
+                        productsElem +=` 
+                        <div class="product-card">
+                          <div class="product-image">
+                            <img src="${image}" alt="${title}">
+                            <div class="discount">${percentage}</div>
+                            <div class="New">${newProduct}</div>
+                          </div>  
+                          <div class="product-meta"> 
+                              
+                                <h3>${title}</h3>
+                                <h6>${body}</h6>
+                                <h6 class="product-price">${discountedPrice}<span class="initial-price">${initialPrice}</span></h6>
+                               
+                          </div>
+
+                          
+                        </div>
+                            
+                            `
+                productFrame.innerHTML = productsElem;
+             });
+
+    }catch(error) {
+                console.log(error)
+    }
+              
+        
+   
+
+}  
+const showMore = document.querySelector('.showMore')
+   showMore.addEventListener
+('click',() => {
+  window.location ='./shop.html'
+});
 
 window.addEventListener('DOMContentLoaded', async () => imageDisplay())
+window.addEventListener('DOMContentLoaded',async () => products())
