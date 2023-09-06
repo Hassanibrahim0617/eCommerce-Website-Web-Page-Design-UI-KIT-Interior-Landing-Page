@@ -1,43 +1,19 @@
 const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
-const formInput = document.querySelector('#forminput');
 const footerForm = document.querySelector('.footer-form');
 const smallMsg = document.querySelector('small');
-const smallFormMsg = document.querySelector('.small');
+const formTotal = document.querySelector('.formtotal form');
+const deleteBtn = document.querySelector('.productinfo button');
 
-
-// FORM INFORMATION VALIDATION
-formInput.addEventListener('submit', (e) => {
+deleteBtn.addEventListener('delete', (e) => {
     e.preventDefault();
 
-    if (e.currentTarget.yourname.value.trim() === '' ||
-        e.currentTarget.email.value.trim() === '' ||
-        e.currentTarget.subject.value.trim() === '' ||
-        e.currentTarget.message.value.trim() === '') {
-        smallFormMsg.textContent = 'Fill in the correct information';
-            setTimeout (function () {
-            smallFormMsg.style.display = 'none';
-            window.location = './contact.html'
-            }, 3000)
-    } else {
-        smallFormMsg.style.color = 'green';
-        smallFormMsg.textContent = 'Success!';
-        setTimeout (function () {
-            smallFormMsg.style.display = 'none';
-            window.location = './contact.html'
-            }, 3000)
-    };
-
-    let contactData = new FormData(formInput);
-    let contactDataForm = Object.fromEntries(contactData);
-    localStorage.setItem('contactForm', JSON.stringify(contactDataForm));
-
-    fetch(`http://localhost:3000/contact`, {
-            method: 'POST',
-            body: JSON.stringify(contactDataForm),
-            headers: { 'content-type': 'application/json' }
-        });
 });
+
+formTotal.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    window.location = './checkout.html'
+})
 
 
 // FOOTER FORM
@@ -47,7 +23,7 @@ footerForm.addEventListener('submit', (e) => {
         smallMsg.textContent = 'Please enter your valid email address';
         setTimeout(function () {
             smallMsg.style.display = 'none';
-            window.location = './contact.html'
+            window.location = './cart.html'
         }, 3000);
     }
     else if (!e.currentTarget.emailaddress.value.trim() === '') {
@@ -55,7 +31,7 @@ footerForm.addEventListener('submit', (e) => {
         smallMsg.textContent = 'email address is not valid';
         setTimeout(function () {
             smallMsg.style.display = 'none';
-            window.location = './contact.html'
+            window.location = './cart.html'
         }, 3000);
     } else {
         smallMsg.style.color = 'green';
