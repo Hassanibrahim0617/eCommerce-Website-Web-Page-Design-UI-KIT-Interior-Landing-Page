@@ -91,7 +91,7 @@ footerForm.addEventListener('submit', (e) => {
         setTimeout(function () {
             smallMsg.style.display = 'none';
             window.location = './checkout.html';
-        }, 3000);
+        }, 4000);
     }
     else if (!e.currentTarget.emailaddress.value.trim() === '') {
 
