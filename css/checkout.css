@@ -13,16 +13,17 @@ body {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 4rem;
   border-color: #fff;
-  margin: 0 3rem;
   position: relative;
+  width: 1440px;
+  gap: 16rem;
 }
 
 nav .left {
   display: flex;
-  gap: 12rem;
+  gap: 18rem;
   align-items: center;
   justify-content: center;
 }
@@ -54,7 +55,7 @@ nav .right img {
 
 .hero_checkout {
   background-image: url(https://res.cloudinary.com/diuay8wri/image/upload/v1692991095/images_folder/djrkirzuclhfm2xc6gnt.png);
-  width: 1270px;
+  width: 1440px;
   height: 316px;
   position: relative;
   background-size: 100%;
@@ -87,16 +88,16 @@ nav .right img {
   font-weight: 500;
   font-size: 48px;
   position: absolute;
-  left: 517px;
-  top: 116px;
+  left: 629px;
+  top: 105px;
 }
 
 .meubel-house-logos-05 {
   width: 77px;
   height: 77px;
   position: absolute;
-  left: 592px;
-  top: 55px;
+  left: 692px;
+  top: 47px;
 }
 
 .group-56 {
@@ -116,7 +117,7 @@ nav .right img {
   font-weight: 700;
   font-size: 1rem;
   position: absolute;
-  left: 577px;
+  left: 674px;
   top: 175px;
   text-decoration: none;
 }
@@ -128,13 +129,13 @@ nav .right img {
   font-weight: 300;
   font-size: 16px;
   position: absolute;
-  left: 651px;
+  left: 751px;
   top: 175px;
 }
 
 .dashicons-arrow-right {
   position: absolute;
-  left: 629px;
+  left: 727px;
   top: 198px;
   transform: translate(0px, -20px);
   overflow: visible;
@@ -549,7 +550,7 @@ nav .right img {
   text-align: left;
   font: 500 24px "Poppins", sans-serif;
   position: absolute;
-  left: 1083px;
+  left: 1097px;
   top: 462px;
 }
 
@@ -559,7 +560,8 @@ nav .right img {
   font: 700 24px "Poppins", sans-serif;
   position: absolute;
   left: 1026px;
-  top: 593px
+  top: 593px;
+  width:200px;
 }
 
 .subtotal2 {
@@ -587,6 +589,7 @@ nav .right img {
   position: absolute;
   left: 666px;
   top: 526px;
+  /* width: 120px; */
 }
 
 .x {
@@ -611,6 +614,7 @@ nav .right img {
   position: absolute;
   left: 1083px;
   top: 526px;
+  width:200px;
 }
 
 .rs-250-000-003 {
@@ -620,6 +624,7 @@ nav .right img {
   position: absolute;
   left: 1083px;
   top: 562px;
+  width:200px;
 }
 
 .line-10 {
@@ -746,7 +751,6 @@ nav .right img {
   border-radius: 50%;
   border-style: solid;
   border-color: #9f9f9f;
-  /* border-width: 1px; */
   margin-right: 10px;
   width: 14px;
   height: 14px;
@@ -758,8 +762,8 @@ nav .right img {
   font-weight: 300;
 }
 
-/* FRAME */
 
+/* FRAME */
 .frame-161 {
   background: #faf3ea;
   padding: 100px 0px;
@@ -767,7 +771,7 @@ nav .right img {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 1270px;
+  width: 1440px;
   height: 270px;
   position: relative;
   margin: 50rem 0 0 0;
@@ -776,7 +780,7 @@ nav .right img {
 .feature {
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  gap: 58px;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -936,7 +940,6 @@ nav .right img {
 }
 
 /* FOOTER */
-
 .footer {
   width: 1270px;
   height: 505px;
@@ -959,8 +962,6 @@ nav .right img {
   left: 0px;
   top: 0px;
 }
-
-
 
 .group-32 {
   width: 1133.01px;
@@ -1007,7 +1008,7 @@ nav .right img {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 0 6.5rem;
+  margin: 0 8.5rem;
 }
 
 .group-24 {
@@ -1065,7 +1066,7 @@ nav .right img {
   height: 101px;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .newsletter {
@@ -1092,6 +1093,12 @@ nav .right img {
   font: 400 14px "Poppins", sans-serif;
 }
 
+small {
+  color: #f20b0b;
+  font-size: 14px;
+  font-weight: 300;
+}
+
 .line-2 {
   border-style: solid;
   border-color: #000000;
@@ -1099,7 +1106,7 @@ nav .right img {
   width: 200px;
   height: 0px;
   position: absolute;
-  left: 929.01px;
+  left: 1010.01px;
   top: 90px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, 1);
@@ -1122,19 +1129,14 @@ nav .right img {
   width: 75.01px;
   height: 0px;
   position: absolute;
-  left: 1140px;
+  left: 1229px;
   top: 90px;
-}
-small {
-  color: #f20b0b;
-  font-size: 14px;
-  font-weight: 300;
 }
 
 .group-44 {
   width: 1240.01px;
   height: 59px;
- 
+
 }
 
 .line-4 {
