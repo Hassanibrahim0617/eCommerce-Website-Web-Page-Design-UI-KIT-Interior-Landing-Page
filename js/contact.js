@@ -22,10 +22,10 @@ formInput.addEventListener('submit', (e) => {
     } else {
         smallFormMsg.style.color = 'green';
         smallFormMsg.textContent = 'Success!';
-        setTimeout (function () {
-            smallFormMsg.style.display = 'none';
-            window.location = './contact.html'
-            }, 3000)
+        // setTimeout (function () {
+        //     smallFormMsg.style.display = 'none';
+        //     window.location = './contact.html'
+        //     }, 3000)
     };
 
     let contactData = new FormData(formInput);

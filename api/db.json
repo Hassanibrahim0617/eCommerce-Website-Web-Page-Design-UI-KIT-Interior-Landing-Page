@@ -256,7 +256,7 @@
     {
       "id": 3,
       "title": "shop",
-      "source": ""
+      "source": "./shop.html"
     },
     {
       "id": 4,
@@ -278,7 +278,7 @@
     {
       "id": 2,
       "title": "Payment Options",
-      "source": ""
+      "source": "./checkout.html"
     },
     {
       "id": 3,
@@ -1610,34 +1610,6 @@
       "province": "kuala lumpur",
       "bankTransfer": "cash-on-delivery",
       "id": 2
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "companyname": "",
-      "country": "",
-      "address": "",
-      "zipcode": "",
-      "town": "",
-      "phonenumber": "",
-      "email": "",
-      "information": "",
-      "province": "",
-      "id": 3
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "companyname": "",
-      "country": "",
-      "address": "",
-      "zipcode": "",
-      "town": "",
-      "phonenumber": "",
-      "email": "",
-      "information": "",
-      "province": "",
-      "id": 4
     }
   ],
   "contact": [
@@ -1654,6 +1626,34 @@
       "subject": "optional",
       "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris sit amet massa vitae tortor. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Lobortis scelerisque fermentum dui faucibus in ornare quam. Nunc aliquet bibendum enim facilisis gravida neque. Eget egestas purus viverra accumsan in nisl.",
       "id": 2
+    },
+    {
+      "yourname": "",
+      "email": "",
+      "subject": "",
+      "message": "",
+      "id": 3
+    },
+    {
+      "yourname": "",
+      "email": "",
+      "subject": "",
+      "message": "",
+      "id": 4
+    },
+    {
+      "yourname": "",
+      "email": "",
+      "subject": "",
+      "message": "",
+      "id": 5
+    },
+    {
+      "yourname": "",
+      "email": "",
+      "subject": "",
+      "message": "",
+      "id": 6
     }
   ],
   "subscribeMail": [
@@ -1752,6 +1752,68 @@
     {
       "emailaddress": "",
       "id": 24
+    },
+    {
+      "emailaddress": "",
+      "id": 25
+    },
+    {
+      "emailaddress": "",
+      "id": 26
+    },
+    {
+      "emailaddress": "",
+      "id": 27
+    },
+    {
+      "emailaddress": "",
+      "id": 28
+    },
+    {
+      "emailaddress": "",
+      "id": 29
+    },
+    {
+      "emailaddress": "",
+      "id": 30
+    }
+  ],
+  "displayFurniture": [
+    {
+      "di": 1,
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991097/images_folder/clpimzfy3yv4eyp5yfha.png"
+    },
+    {
+      "di": 2,
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991017/images_folder/uih8a60cbrglyqkgpiu9.svg"
+    },
+    {
+      "di": 3,
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991100/images_folder/piolys7xtumgrikr3gyr.png"
+    },
+    {
+      "di": 4,
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991013/images_folder/rfhvkzqsjiumzaaxk6o7.svg"
+    },
+    {
+      "di": 5,
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991006/images_folder/dbrueefrbmncnn4m2iip.svg"
+    },
+    {
+      "di": 6,
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991016/images_folder/vtttzsgd8skntwwa0cdc.svg"
+    },
+    {
+      "di": 7,
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991223/images_folder/w9tk5oicce2ayubjnxri.svg"
+    },
+    {
+      "di": 8,
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991023/images_folder/rm3twugvfd9wqtw5laup.svg"
+    },
+    {
+      "di": 9,
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991098/images_folder/u58uknnu1nllbgy3xeul.png"
     }
   ]
 }
