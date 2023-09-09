@@ -5,6 +5,7 @@ const smallMsg = document.querySelector('.error');
 const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
 console.log(smallMsg)
+
 const imageDisplay = async () => {
   let fetchImage = `http://localhost:3000/headingImages`;
   try {
@@ -48,7 +49,7 @@ const products = async () => {
       productsElem += ` 
             <div class="product-card">
                    <div class="product-image">
-                          <img src="${image}" alt="${title}">
+                          <img src="${image}" id="image" alt="${title}">
                           <div class="discount">${percentage}</div>
                           <div class="New">${newProduct}</div>
                    </div>  
@@ -67,6 +68,8 @@ const products = async () => {
       productFrame.innerHTML = productsElem;
     });
 
+
+
   } catch (error) {
     console.log(error)
   }
@@ -80,6 +83,35 @@ showMore.addEventListener
   ('click', () => {
     // window.location = './shop.html'
   });
+
+
+
+  // FURNIRO FORNITURE SHOWROOM AND
+
+  const furnitureShowroom = document.querySelector('.images');
+ 
+
+  furniturepPosts = async () => {
+    let furnitureUrl = `http://localhost:3000/displayFurniture`
+    try{
+      const response = await fetch(furnitureUrl)
+      const furniturepPosts = await response.json()
+
+      let elemDiv = ''
+      furniturepPosts.forEach((furniture) =>{
+        let {id, image} = furniture;
+        elemDiv += `
+        
+           <img class="" src="${image}?id=${id}" />
+        
+        `
+        // furnitureShowroom.innerHTML = elemDiv;
+        
+      })
+    }catch(error){
+      console.log(error)
+    };
+  };
 
 //  FOOTER FORM
 footerForm.addEventListener('submit', (e) => {
@@ -177,3 +209,4 @@ window.addEventListener('DOMContentLoaded', async () => postlists());
 window.addEventListener('DOMContentLoaded', async () => postlists2());
 window.addEventListener('DOMContentLoaded', async () => imageDisplay());
 window.addEventListener('DOMContentLoaded', async () => products());
+window.addEventListener('DOMContentLoaded', async () => furniturepPosts());

@@ -8,7 +8,9 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    max-width: 1270px;
 }
+
 
 nav {
     display: flex;
@@ -17,13 +19,14 @@ nav {
     height: 4rem;
     border-color: #fff;
     position: relative;
-    width: 1440px;
-    gap: 16rem;
+    max-width: 1270px;
+    gap: 9rem;
+    overflow-x: hidden;
 }
 
 nav .left {
     display: flex;
-    gap: 18rem;
+    gap: 7rem;
     align-items: center;
     justify-content: center;
 }
@@ -32,7 +35,7 @@ nav .left {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .left .page_list ul li a {
@@ -55,7 +58,7 @@ nav .right img {
 
 .hero_checkout {
     background-image: url(https://res.cloudinary.com/diuay8wri/image/upload/v1692991095/images_folder/djrkirzuclhfm2xc6gnt.png);
-    width: 1440px;
+    max-width: 1270px;
     height: 316px;
     position: relative;
     background-size: 100%;
@@ -67,7 +70,7 @@ nav .right img {
 .herodescription {
     align-items: center;
     margin: auto;
-    padding: 4rem 0;
+    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -77,33 +80,34 @@ nav .right img {
 /* figma design */
 .group-55 {
     width: 233px;
-    height: 133px;
-    margin: auto;
-    position: static;
+    height: 103px;
+    margin: 1rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .checkout {
     color: #000000;
     text-align: center;
     font-weight: 500;
-    font-size: 48px;
-    position: absolute;
-    left: 679px;
-    top: 105px;
+    font-size: 38px;
+
 }
 
 .meubel-house-logos-05 {
-    width: 77px;
-    height: 77px;
-    position: absolute;
-    left: 692px;
-    top: 47px;
+    width: 57px;
+    height: 57px;
+    margin: auto;
 }
 
 .group-56 {
     width: 157px;
     height: 24px;
-    position: static;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
 .hometag a,
@@ -116,9 +120,6 @@ nav .right img {
     text-align: left;
     font-weight: 700;
     font-size: 1rem;
-    position: absolute;
-    left: 674px;
-    top: 175px;
     text-decoration: none;
 }
 
@@ -128,18 +129,15 @@ nav .right img {
     text-align: left;
     font-weight: 300;
     font-size: 16px;
-    position: absolute;
-    left: 751px;
-    top: 175px;
+
 }
 
 .dashicons-arrow-right {
-    position: absolute;
-    left: 727px;
-    top: 198px;
-    transform: translate(0px, -20px);
+    width: 20px;
+    height: 20px;
     overflow: visible;
 }
+
 
 /* LEFT CONTAINER */
 .container {
@@ -390,7 +388,7 @@ text-align: left;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 1440px;
+   max-width: 1270px;
     height: 270px;
     position: relative;
 }
@@ -398,10 +396,11 @@ text-align: left;
 .feature {
     display: flex;
     flex-direction: row;
-    gap: 58px;
+    gap: 30px;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    max-width: 1200px;
 }
 
 .frame-5 {
@@ -412,6 +411,7 @@ text-align: left;
     justify-content: flex-start;
     flex-shrink: 0;
     position: relative;
+    max-width: 280px;
 }
 
 .trophy-1 {
@@ -454,7 +454,7 @@ text-align: left;
 .crafted-from-top-materials {
     color: var(--color-gray-3, #898989);
     text-align: left;
-    font: 500 20px/150% "Poppins", sans-serif;
+    font: 500 16px/150% "Poppins", sans-serif;
     position: relative;
 }
 
@@ -466,6 +466,7 @@ text-align: left;
     justify-content: center;
     flex-shrink: 0;
     position: relative;
+    max-width: 280px;
 }
 
 .guarantee {
@@ -493,7 +494,7 @@ text-align: left;
 .over-2-years {
     color: var(--color-gray-3, #898989);
     text-align: left;
-    font: 500 20px/150% "Poppins", sans-serif;
+    font: 500 16px/150% "Poppins", sans-serif;
     position: relative;
 }
 
@@ -505,6 +506,7 @@ text-align: left;
     justify-content: center;
     flex-shrink: 0;
     position: relative;
+    max-width: 280px;
 }
 
 .shipping {
@@ -523,7 +525,7 @@ text-align: left;
 .order-over-150 {
     color: var(--color-gray-3, #898989);
     text-align: left;
-    font: 500 20px/150% "Poppins", sans-serif;
+    font: 500 16px/150% "Poppins", sans-serif;
     position: relative;
 }
 
@@ -535,6 +537,7 @@ text-align: left;
     justify-content: flex-start;
     flex-shrink: 0;
     position: relative;
+    max-width: 280px;
 }
 
 .customer-support {
@@ -553,14 +556,13 @@ text-align: left;
 .dedicated-support {
     color: var(--color-gray-3, #898989);
     text-align: left;
-    font: 500 20px/150% "Poppins", sans-serif;
+    font: 500 16px/150% "Poppins", sans-serif;
     position: relative;
 }
 
 /* FOOTER */
-
 .footer {
-    width: 1270px;
+    max-width: 1270px;
     height: 505px;
     position: relative;
     display: flex;
@@ -568,6 +570,8 @@ text-align: left;
     align-items: start;
     padding: 5rem 0 1rem 0rem;
     justify-content: space-between;
+    margin-top: 5rem;
+    overflow-x: hidden;
 }
 
 .rectangle-19 {
@@ -582,8 +586,6 @@ text-align: left;
     top: 0px;
 }
 
-
-
 .group-32 {
     width: 1133.01px;
     height: 312px;
@@ -594,8 +596,8 @@ text-align: left;
 .group-45 {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 0 0 0 6rem;
+    gap: 1rem;
+    padding: 0 0 0 1rem;
 }
 
 ._400-university-drive-suite-200-coral-gables-fl-33134-usa {
@@ -617,7 +619,7 @@ text-align: left;
 .group-31 {
     height: 93px;
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
     align-items: center;
     justify-content: center;
 }
@@ -625,11 +627,11 @@ text-align: left;
 .group-28 {
     height: 312px;
     display: flex;
-    gap: 7rem;
+    gap: 5rem;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 0 8.5rem;
+    margin: 0 5.5rem;
 }
 
 .group-24 {
@@ -705,27 +707,49 @@ text-align: left;
 .footer-form {
     display: flex;
     gap: 1rem;
-}
-
-.enter-your-email-address {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .enter-your-email-address {
     color: #9f9f9f;
     border: none;
     outline: none;
     font: 400 14px "Poppins", sans-serif;
+    margin-top: 0;
+  }
+
+small {
+    color: #f20b0b;
+    font-size: 14px;
+    font-weight: 300;
 }
 
+.line{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 788.01px;
+    top: 90px;
+}
 .line-2 {
     border-style: solid;
     border-color: #000000;
     border-width: 1px 0 0 0;
     width: 200px;
     height: 0px;
-    position: absolute;
-    left: 1005.01px;
-    top: 90px;
     transform-origin: 0 0;
     transform: rotate(0deg) scale(1, 1);
 }
+
+.line-3 {
+    border-style: solid;
+    border-color: #000000;
+    border-width: 1px 0 0 0;
+    width: 75.01px;
+    height: 0px;
+} 
 
 .subscribe {
     color: #000000;
@@ -735,23 +759,6 @@ text-align: left;
     background-color: #fff;
     font: 500 14px "Poppins", sans-serif;
 
-}
-
-.line-3 {
-    border-style: solid;
-    border-color: #000000;
-    border-width: 1px 0 0 0;
-    width: 75.01px;
-    height: 0px;
-    position: absolute;
-    left: 1224px;
-    top: 90px;
-}
-
-small {
-    color: #f20b0b;
-    font-size: 14px;
-    font-weight: 300;
 }
 
 .group-44 {

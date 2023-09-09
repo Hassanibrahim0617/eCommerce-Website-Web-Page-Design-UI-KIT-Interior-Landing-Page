@@ -8,7 +8,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  max-width: 1270px;
 }
+
 
 nav {
   display: flex;
@@ -17,13 +19,14 @@ nav {
   height: 4rem;
   border-color: #fff;
   position: relative;
-  width: 1440px;
-  gap: 16rem;
+  max-width: 1270px;
+  gap: 9rem;
+  overflow-x: hidden;
 }
 
 nav .left {
   display: flex;
-  gap: 18rem;
+  gap: 7rem;
   align-items: center;
   justify-content: center;
 }
@@ -32,7 +35,7 @@ nav .left {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 .left .page_list ul li a {
@@ -55,8 +58,8 @@ nav .right img {
 
 .hero_checkout {
   background-image: url(https://res.cloudinary.com/diuay8wri/image/upload/v1692991095/images_folder/djrkirzuclhfm2xc6gnt.png);
-  width: 1440px;
-  height: 316px;
+  max-width: 1270px;
+  /* height: 316px; */
   position: relative;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -67,7 +70,7 @@ nav .right img {
 .herodescription {
   align-items: center;
   margin: auto;
-  padding: 4rem 0;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -77,33 +80,34 @@ nav .right img {
 /* figma design */
 .group-55 {
   width: 233px;
-  height: 133px;
-  margin: auto;
-  position: static;
+  height: 103px;
+  margin: 1rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .checkout {
   color: #000000;
   text-align: center;
   font-weight: 500;
-  font-size: 48px;
-  position: absolute;
-  left: 629px;
-  top: 105px;
+  font-size: 38px;
+
 }
 
 .meubel-house-logos-05 {
-  width: 77px;
-  height: 77px;
-  position: absolute;
-  left: 692px;
-  top: 47px;
+  width: 57px;
+  height: 57px;
+  margin: auto;
 }
 
 .group-56 {
   width: 157px;
   height: 24px;
-  position: static;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
 .hometag a,
@@ -116,9 +120,6 @@ nav .right img {
   text-align: left;
   font-weight: 700;
   font-size: 1rem;
-  position: absolute;
-  left: 674px;
-  top: 175px;
   text-decoration: none;
 }
 
@@ -128,16 +129,12 @@ nav .right img {
   text-align: left;
   font-weight: 300;
   font-size: 16px;
-  position: absolute;
-  left: 751px;
-  top: 175px;
+
 }
 
 .dashicons-arrow-right {
-  position: absolute;
-  left: 727px;
-  top: 198px;
-  transform: translate(0px, -20px);
+  width: 20px;
+  height: 20px;
   overflow: visible;
 }
 
@@ -146,46 +143,55 @@ nav .right img {
 .group-133 {
   width: 608px;
   height: 780px;
-  position: static;
+  display: flex;
+  gap: 19rem;
+  align-items: start;
+  margin: 6rem 0 0 4rem; 
 }
 
 .rectangle-51 {
   background: #fff;
   width: 608px;
   height: 1714px;
-  position: absolute;
-  left: 70px;
-  top: 418px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .billing-details {
+  width: 608px;
   color: #000000;
   text-align: left;
   font: 600 36px "Poppins", sans-serif;
   position: relative;
-  left: 120px;
-  top: 41px;
+  
 }
 
 .forminput {
   width: 212px;
   height: 121px;
-  position: static;
   font-size: 16px;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .forminput input {
   padding: 15px;
+  margin-top: 1rem;
+}
+
+.name{
+display: flex;
+gap: 2rem;
+width: 105px;
 }
 
 .first-name {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 123px;
-  top: 499px;
 }
 
 .rectangle-53 {
@@ -196,18 +202,12 @@ nav .right img {
   border-width: 1px;
   width: 211px;
   height: 75px;
-  position: absolute;
-  left: 120px;
-  top: 538px;
 }
 
 .last-name {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 364px;
-  top: 499px;
 }
 
 .rectangle-532 {
@@ -218,18 +218,12 @@ nav .right img {
   border-width: 1px;
   width: 211px;
   height: 75px;
-  position: absolute;
-  left: 358px;
-  top: 538px;
 }
 
 .company-name-optional {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 117px;
-  top: 644px;
 }
 
 .rectangle-54 {
@@ -240,9 +234,6 @@ nav .right img {
   border-width: 1px;
   width: 453px;
   height: 75px;
-  position: absolute;
-  left: 119px;
-  top: 688px;
 }
 
 .group-121 {
@@ -255,9 +246,6 @@ nav .right img {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 118px;
-  top: 921px;
 }
 
 .rectangle-533 {
@@ -268,9 +256,6 @@ nav .right img {
   border-width: 1px;
   width: 453px;
   height: 75px;
-  position: absolute;
-  left: 119px;
-  top: 970px;
 }
 
 .group-125 {
@@ -283,9 +268,6 @@ nav .right img {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 117px;
-  top: 1334px;
 }
 
 .rectangle-534 {
@@ -296,9 +278,6 @@ nav .right img {
   border-width: 1px;
   width: 453px;
   height: 75px;
-  position: absolute;
-  left: 119px;
-  top: 1376px;
 }
 
 .group-122 {
@@ -311,9 +290,6 @@ nav .right img {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 117px;
-  top: 1067px;
 }
 
 .rectangle-535 {
@@ -324,9 +300,6 @@ nav .right img {
   border-width: 1px;
   width: 453px;
   height: 75px;
-  position: absolute;
-  left: 119px;
-  top: 1110px;
 }
 
 .group-126 {
@@ -339,9 +312,6 @@ nav .right img {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 117px;
-  top: 1468px;
 }
 
 .rectangle-536 {
@@ -352,9 +322,6 @@ nav .right img {
   border-width: 1px;
   width: 453px;
   height: 75px;
-  position: absolute;
-  left: 119px;
-  top: 1509px;
 }
 
 .group-127 {
@@ -367,9 +334,6 @@ nav .right img {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 117px;
-  top: 1598px;
 }
 
 .rectangle-537 {
@@ -380,9 +344,6 @@ nav .right img {
   border-width: 1px;
   width: 453px;
   height: 75px;
-  position: absolute;
-  left: 119px;
-  top: 1643px;
 }
 
 .group-128 {
@@ -399,18 +360,12 @@ nav .right img {
   border-width: 1px;
   width: 453px;
   height: 75px;
-  position: absolute;
-  left: 119px;
-  top: 1773px;
 }
 
 .additional-information {
   color: #9f9f9f;
   text-align: left;
   font: 400 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 144px;
-  top: 1801px;
 }
 
 .group-123 {
@@ -429,9 +384,6 @@ nav .right img {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 119px;
-  top: 786px;
 }
 
 .rectangle-539 {
@@ -442,18 +394,12 @@ nav .right img {
   border-width: 1px;
   width: 453px;
   height: 75px;
-  position: absolute;
-  left: 116px;
-  top: 827px;
 }
 
 .sri-lanka {
   color: #9f9f9f;
   text-align: left;
   font: 400 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 146px;
-  top: 855px;
 }
 
 .dashicons-arrow-down-alt-2 {
@@ -473,9 +419,7 @@ nav .right img {
   color: #000000;
   text-align: left;
   font: 500 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 117px;
-  top: 1202px;
+ 
 }
 
 .rectangle-5310 {
@@ -486,18 +430,12 @@ nav .right img {
   border-width: 1px;
   width: 453px;
   height: 75px;
-  position: absolute;
-  left: 119px;
-  top: 1243px;
 }
 
 .western-province {
   color: #9f9f9f;
   text-align: left;
   font: 400 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 130px;
-  top: 1270px;
 }
 
 .dashicons-arrow-down-alt-22 {
@@ -509,87 +447,72 @@ nav .right img {
 
 /* PAYMENT DETAILS */
 
-.group-134 {
-  width: 608px;
+.rectangle-52 {
+  margin-top: 4rem;
   height: 789px;
-  position: static;
+ display: flex;
+ flex-direction: column;
+ align-items: end;
 }
 
-.rectangle-52 {
-  background: #ffffff;
-  width: 608px;
-  height: 789px;
-  position: absolute;
-  left: 734px;
-  top: 479px;
+
+
+.group-114 {
+  width: 318px;
+  height: 64px;
+  position: relative;
 }
 
 .group-132 {
   width: 533px;
   height: 616px;
-  position: static;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.group-114 {
-  width: 318px;
-  height: 64px;
-  position: static;
+.headingdetail, .productdetail, .productsub, .producttotal{
+  display: flex;
+  gap: 10rem;
+  align-items: end;
+  justify-content: space-between;
 }
 
 .product {
   color: #000000;
   text-align: left;
   font: 500 24px "Poppins", sans-serif;
-  position: absolute;
-  left: 666px;
-  top: 462px;
 }
 
 .subtotal {
   color: #000000;
-  text-align: left;
+  text-align: right;
   font: 500 24px "Poppins", sans-serif;
-  position: absolute;
-  left: 1097px;
-  top: 462px;
 }
 
 .rs-250-000-00 {
   color: var(--primary, #b88e2f);
   text-align: left;
   font: 700 24px "Poppins", sans-serif;
-  position: absolute;
-  left: 1026px;
-  top: 593px;
-  width:200px;
 }
 
 .subtotal2 {
   color: #000000;
   text-align: left;
   font: 400 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 666px;
-  top: 562px;
-}
+} 
 
 .total {
   color: #000000;
   text-align: left;
   font: 400 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 666px;
-  top: 593px;
 }
 
 .asgaard-sofa {
   color: #9f9f9f;
   text-align: left;
   font: 400 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 666px;
-  top: 526px;
-  /* width: 120px; */
 }
 
 .x {
@@ -610,21 +533,12 @@ nav .right img {
 .rs-250-000-002 {
   color: #000000;
   text-align: left;
-  font: 300 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 1083px;
-  top: 526px;
-  width:200px;
 }
 
 .rs-250-000-003 {
   color: #000000;
   text-align: left;
   font: 300 16px "Poppins", sans-serif;
-  position: absolute;
-  left: 1083px;
-  top: 562px;
-  width:200px;
 }
 
 .line-10 {
@@ -633,18 +547,11 @@ nav .right img {
   border-width: 1px 0 0 0;
   width: 527.01px;
   height: 0px;
-  position: absolute;
-  left: 671px;
-  top: 670.5px;
 }
 
 .group-129 {
   width: 528px;
   height: 107px;
-  position: absolute;
-  left: 667px;
-  top: 694px;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -655,8 +562,6 @@ nav .right img {
   color: #000000;
   text-align: left;
   font: 400 16px "Poppins", sans-serif;
-
-  top: 794px;
   display: flex;
   gap: 14px;
   align-items: center;
@@ -764,6 +669,7 @@ nav .right img {
 
 
 /* FRAME */
+
 .frame-161 {
   background: #faf3ea;
   padding: 100px 0px;
@@ -771,19 +677,20 @@ nav .right img {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 1440px;
+ max-width: 1270px;
   height: 270px;
   position: relative;
-  margin: 50rem 0 0 0;
+  margin-top: 50rem;
 }
 
 .feature {
   display: flex;
   flex-direction: row;
-  gap: 58px;
+  gap: 30px;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  max-width: 1200px;
 }
 
 .frame-5 {
@@ -794,6 +701,7 @@ nav .right img {
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
+  max-width: 280px;
 }
 
 .trophy-1 {
@@ -836,7 +744,7 @@ nav .right img {
 .crafted-from-top-materials {
   color: var(--color-gray-3, #898989);
   text-align: left;
-  font: 500 20px/150% "Poppins", sans-serif;
+  font: 500 16px/150% "Poppins", sans-serif;
   position: relative;
 }
 
@@ -848,6 +756,7 @@ nav .right img {
   justify-content: center;
   flex-shrink: 0;
   position: relative;
+  max-width: 280px;
 }
 
 .guarantee {
@@ -875,7 +784,7 @@ nav .right img {
 .over-2-years {
   color: var(--color-gray-3, #898989);
   text-align: left;
-  font: 500 20px/150% "Poppins", sans-serif;
+  font: 500 16px/150% "Poppins", sans-serif;
   position: relative;
 }
 
@@ -887,6 +796,7 @@ nav .right img {
   justify-content: center;
   flex-shrink: 0;
   position: relative;
+  max-width: 280px;
 }
 
 .shipping {
@@ -905,7 +815,7 @@ nav .right img {
 .order-over-150 {
   color: var(--color-gray-3, #898989);
   text-align: left;
-  font: 500 20px/150% "Poppins", sans-serif;
+  font: 500 16px/150% "Poppins", sans-serif;
   position: relative;
 }
 
@@ -917,6 +827,7 @@ nav .right img {
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
+  max-width: 280px;
 }
 
 .customer-support {
@@ -935,13 +846,13 @@ nav .right img {
 .dedicated-support {
   color: var(--color-gray-3, #898989);
   text-align: left;
-  font: 500 20px/150% "Poppins", sans-serif;
+  font: 500 16px/150% "Poppins", sans-serif;
   position: relative;
 }
 
 /* FOOTER */
 .footer {
-  width: 1270px;
+  max-width: 1270px;
   height: 505px;
   position: relative;
   display: flex;
@@ -949,6 +860,8 @@ nav .right img {
   align-items: start;
   padding: 5rem 0 1rem 0rem;
   justify-content: space-between;
+  margin-top: 5rem;
+  overflow-x: hidden;
 }
 
 .rectangle-19 {
@@ -973,8 +886,8 @@ nav .right img {
 .group-45 {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 0 0 0 6rem;
+  gap: 1rem;
+  padding: 0 0 0 1rem;
 }
 
 ._400-university-drive-suite-200-coral-gables-fl-33134-usa {
@@ -996,7 +909,7 @@ nav .right img {
 .group-31 {
   height: 93px;
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
   align-items: center;
   justify-content: center;
 }
@@ -1004,11 +917,11 @@ nav .right img {
 .group-28 {
   height: 312px;
   display: flex;
-  gap: 7rem;
+  gap: 5rem;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 0 8.5rem;
+  margin: 0 5.5rem;
 }
 
 .group-24 {
@@ -1066,7 +979,7 @@ nav .right img {
   height: 101px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .newsletter {
@@ -1084,6 +997,9 @@ nav .right img {
 .footer-form {
   display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .enter-your-email-address {
@@ -1091,6 +1007,7 @@ nav .right img {
   border: none;
   outline: none;
   font: 400 14px "Poppins", sans-serif;
+  margin-top: 0;
 }
 
 small {
@@ -1099,18 +1016,30 @@ small {
   font-weight: 300;
 }
 
+.line{
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  left: 788.01px;
+  top: 90px;
+}
 .line-2 {
   border-style: solid;
   border-color: #000000;
   border-width: 1px 0 0 0;
   width: 200px;
   height: 0px;
-  position: absolute;
-  left: 1010.01px;
-  top: 90px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, 1);
 }
+
+.line-3 {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px 0 0 0;
+  width: 75.01px;
+  height: 0px;
+} 
 
 .subscribe {
   color: #000000;
@@ -1120,17 +1049,6 @@ small {
   background-color: #fff;
   font: 500 14px "Poppins", sans-serif;
 
-}
-
-.line-3 {
-  border-style: solid;
-  border-color: #000000;
-  border-width: 1px 0 0 0;
-  width: 75.01px;
-  height: 0px;
-  position: absolute;
-  left: 1229px;
-  top: 90px;
 }
 
 .group-44 {
