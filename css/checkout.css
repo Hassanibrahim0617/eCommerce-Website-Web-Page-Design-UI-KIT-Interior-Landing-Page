@@ -47,6 +47,12 @@ nav .left {
   font-weight: 500;
 }
 
+.right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
 nav .right a {
   text-decoration: none;
 }
