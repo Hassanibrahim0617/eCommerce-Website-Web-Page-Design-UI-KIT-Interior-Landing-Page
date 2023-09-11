@@ -185,6 +185,9 @@ const products = async () => {
             shopPage.innerHTML = elem;
 
 
+        });
+        shopPage.addEventListener('click', () =>{
+            window.location = './singleshop.html';
         })
 
     } catch (error) {
