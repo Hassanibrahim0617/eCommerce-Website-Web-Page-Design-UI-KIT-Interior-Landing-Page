@@ -1815,5 +1815,53 @@
       "di": 9,
       "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991098/images_folder/u58uknnu1nllbgy3xeul.png"
     }
+  ],
+  "navUl":[
+    {
+      "id": 1,
+      "path": "./index.html",
+      "title": "home"
+    },
+    {
+      "id": 2,
+      "path": "./shop.html",
+      "title": "shop"
+    },
+    {
+      "id": 3,
+      "path": "./",
+      "title": "about"
+    },
+    {
+      "id": 4,
+      "path": "./contact.html",
+      "title": "contact"
+    }
+  ],
+  "navLinks":[
+    {
+      "id": 1,
+      "path": "",
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991033/images_folder/t13roe8xe31o0m0vnnxk.png",
+      "alt": "mdi_account-alert-outline"
+    },
+    {
+      "id": 2,
+      "path": "",
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991025/images_folder/qtylpkjixnjzj2qzukxb.png",
+      "alt": "akar-icons_search"
+    },
+    {
+      "id": 3,
+      "path": "",
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991019/images_folder/x3fddqy7wrysdu1rlj5q.svg",
+      "alt": "akar-icons_heart"
+    },
+    {
+      "id": 4,
+      "path": "./cart.html",
+      "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991033/images_folder/bubbpfdjxlpdud2wjubs.png",
+      "alt": "ant-design_shopping-cart-outlined"
+    }
   ]
 }

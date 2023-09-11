@@ -1,14 +1,13 @@
+const shopPage = document.querySelector('.shopFrame');
 const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
 const footerForm = document.querySelector('.footer-form');
 const smallMsg = document.querySelector('small');
-const formTotal = document.querySelector('.formtotal form');
-const deleteBtn = document.querySelector('.productinfo button');
 const pageList = document.querySelector('ul');
 const rightNav = document.querySelector('.right');
 
 
-// NAV LINKS
+
 function fetchNav() {
     let url = ` http://localhost:3000/navUl`;
     fetch(url).then((response) => response.json())
@@ -50,18 +49,7 @@ function rightNavLinks() {
     });
 
 };
-
-// BUTTON
-deleteBtn.addEventListener('delete', (e) => {
-    e.preventDefault();
-
-});
-
-formTotal.addEventListener('submit', (e) =>{
-    e.preventDefault();
-    window.location = './checkout.html'
-})
-
+ 
 
 // FOOTER FORM
 footerForm.addEventListener('submit', (e) => {
@@ -155,6 +143,60 @@ const postlists2 = async () => {
 };
 
 
+
+// PRODUCT
+const products = async () => {
+    try {
+        let productData = `http://localhost:3000/shop`;
+
+        const response = await fetch(productData);
+        const products = await response.json();
+
+        let elem = "";
+        products.forEach((product) => {
+            let { id, image, title, body, price, discountedPrice, newProduct, percentage } = product;
+
+
+            elem += ` 
+                       
+
+                        <div class="product_card">
+                            <div class="product_image">
+                                <img src="${image}" alt="${title}">
+                                <div class="discount">${percentage}</div>
+                                <!--<div class="new">${newProduct}</div>-->
+
+                            </div>
+                            <div class="product_meta">
+                                <h3>${title}</h3>
+                                <h6>${body}</h6>
+                                <h6 class="price">${discountedPrice} <small>${price}</small> </h6>
+                                
+                            </div>
+                                            
+    
+                        </div>  
+                         
+                       
+                                                     
+                    `
+
+
+            shopPage.innerHTML = elem;
+
+
+        })
+
+    } catch (error) {
+        console.log(error)
+    }
+
+
+
+
+};
+
+window.addEventListener('DOMContentLoaded', async () => products());
 window.addEventListener('DOMContentLoaded', async () => postlists());
 window.addEventListener('DOMContentLoaded', async () => postlists2());
 window.addEventListener('DOMContentLoaded', async () => fetchNav());

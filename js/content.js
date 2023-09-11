@@ -5,10 +5,58 @@ const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
 const footerForm = document.querySelector('.footer-form');
 const smallMsg = document.querySelector('small');
+const pageList = document.querySelector('ul');
+const rightNav = document.querySelector('.right');
 
-let url = `http://localhost:3000/blog/${singleblog}`;
 
-fetch(url).then(function (response) {
+// NAV LINKS
+function fetchNav() {
+    let url = ` http://localhost:3000/navUl`;
+    fetch(url).then((response) => response.json())
+    .then((navs) =>{
+        let navUlist = '';
+       
+
+        navs.forEach((nav) =>{
+             let {id, path, title} = nav;
+            navUlist += `
+       
+            <li><a href="${path}?id=${id}">${title}</a></li>
+        
+        `
+        pageList.innerHTML = navUlist;
+        })
+    });
+
+}
+
+function rightNavLinks() {
+    let url = ` http://localhost:3000/navLinks`;
+    fetch(url).then((response) => response.json())
+    .then((links) =>{
+        let listDiv = '';
+       
+
+        links.forEach((link) =>{
+             let {id, path, image, alt} = link;
+            listDiv += `
+            <div>
+            <a href="${path}">
+                <img src="${image}?id=${id}"  alt="${alt}" />
+            </a>
+            </div>
+        `
+        rightNav.innerHTML = listDiv;
+        })
+    });
+
+};
+
+
+// SINGLE POST
+let blogUrl = `http://localhost:3000/blog/${singleblog}`;
+
+fetch(blogUrl).then(function (response) {
     return response.json()
  }).then(function (blog) {
     let elemDiv = '';
@@ -17,7 +65,7 @@ fetch(url).then(function (response) {
     elemDiv += `
         <div class="blogcontainer">
             <img class="blog-img"
-                src="${image}"
+                src="${image}?id=${id}"
                 alt="${title}">
             <div class="leftsmall">
                 <small>
@@ -148,3 +196,5 @@ const postlists2 = async () => {
 
 window.addEventListener('DOMContentLoaded', async () => postlists());
 window.addEventListener('DOMContentLoaded', async () => postlists2());
+window.addEventListener('DOMContentLoaded', async () => fetchNav());
+window.addEventListener('DOMContentLoaded', async () => rightNavLinks());

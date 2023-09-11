@@ -16,7 +16,52 @@ const directBank = document.querySelector('#ellipse-13');
 const displayError = document.querySelector('.small');
 const footerForm = document.querySelector('.footer-form');
 const smallMsg = document.querySelector('small');
+const pageList = document.querySelector('ul');
+const rightNav = document.querySelector('.right');
 
+
+// NAV LINKS
+function fetchNav() {
+    let url = ` http://localhost:3000/navUl`;
+    fetch(url).then((response) => response.json())
+    .then((navs) =>{
+        let navUlist = '';
+       
+
+        navs.forEach((nav) =>{
+             let {id, path, title} = nav;
+            navUlist += `
+       
+            <li><a href="${path}?id=${id}">${title}</a></li>
+        
+        `
+        pageList.innerHTML = navUlist;
+        })
+    });
+
+}
+
+function rightNavLinks() {
+    let url = ` http://localhost:3000/navLinks`;
+    fetch(url).then((response) => response.json())
+    .then((links) =>{
+        let listDiv = '';
+       
+
+        links.forEach((link) =>{
+             let {id, path, image, alt} = link;
+            listDiv += `
+            <div>
+            <a href="${path}">
+                <img src="${image}?id=${id}"  alt="${alt}" />
+            </a>
+            </div>
+        `
+        rightNav.innerHTML = listDiv;
+        })
+    });
+
+};
 
 formPayment.addEventListener('submit', (e) => {
     try {
@@ -177,3 +222,5 @@ const postlists2 = async () => {
 
 window.addEventListener('DOMContentLoaded', async () => postlists());
 window.addEventListener('DOMContentLoaded', async () => postlists2());
+window.addEventListener('DOMContentLoaded', async () => fetchNav());
+window.addEventListener('DOMContentLoaded', async () => rightNavLinks());

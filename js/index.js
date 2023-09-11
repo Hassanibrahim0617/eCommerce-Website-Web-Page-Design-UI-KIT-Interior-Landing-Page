@@ -4,8 +4,54 @@ const footerForm = document.querySelector('.footer-form');
 const smallMsg = document.querySelector('.error');
 const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
-console.log(smallMsg)
+const pageList = document.querySelector('ul');
+const rightNav = document.querySelector('.right');
 
+
+// NAV LINKS
+function fetchNav() {
+    let url = ` http://localhost:3000/navUl`;
+    fetch(url).then((response) => response.json())
+    .then((navs) =>{
+        let navUlist = '';
+       
+
+        navs.forEach((nav) =>{
+             let {id, path, title} = nav;
+            navUlist += `
+       
+            <li><a href="${path}?id=${id}">${title}</a></li>
+        
+        `
+        pageList.innerHTML = navUlist;
+        })
+    });
+
+}
+
+function rightNavLinks() {
+    let url = ` http://localhost:3000/navLinks`;
+    fetch(url).then((response) => response.json())
+    .then((links) =>{
+        let listDiv = '';
+       
+
+        links.forEach((link) =>{
+             let {id, path, image, alt} = link;
+            listDiv += `
+            <div>
+            <a href="${path}">
+                <img src="${image}?id=${id}"  alt="${alt}" />
+            </a>
+            </div>
+        `
+        rightNav.innerHTML = listDiv;
+        })
+    });
+
+};
+
+// RANGE IMAGE
 const imageDisplay = async () => {
   let fetchImage = `http://localhost:3000/headingImages`;
   try {
@@ -210,3 +256,5 @@ window.addEventListener('DOMContentLoaded', async () => postlists2());
 window.addEventListener('DOMContentLoaded', async () => imageDisplay());
 window.addEventListener('DOMContentLoaded', async () => products());
 window.addEventListener('DOMContentLoaded', async () => furniturepPosts());
+window.addEventListener('DOMContentLoaded', async () => fetchNav());
+window.addEventListener('DOMContentLoaded', async () => rightNavLinks());

@@ -2,13 +2,11 @@ const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
 const footerForm = document.querySelector('.footer-form');
 const smallMsg = document.querySelector('small');
-const formTotal = document.querySelector('.formtotal form');
-const deleteBtn = document.querySelector('.productinfo button');
 const pageList = document.querySelector('ul');
 const rightNav = document.querySelector('.right');
 
 
-// NAV LINKS
+
 function fetchNav() {
     let url = ` http://localhost:3000/navUl`;
     fetch(url).then((response) => response.json())
@@ -20,7 +18,7 @@ function fetchNav() {
              let {id, path, title} = nav;
             navUlist += `
        
-            <li><a href="${path}?id=${id}">${title}</a></li>
+            <li><a href="${path}?id=${title}${id}">${title}</a></li>
         
         `
         pageList.innerHTML = navUlist;
@@ -50,18 +48,7 @@ function rightNavLinks() {
     });
 
 };
-
-// BUTTON
-deleteBtn.addEventListener('delete', (e) => {
-    e.preventDefault();
-
-});
-
-formTotal.addEventListener('submit', (e) =>{
-    e.preventDefault();
-    window.location = './checkout.html'
-})
-
+ 
 
 // FOOTER FORM
 footerForm.addEventListener('submit', (e) => {
