@@ -18,66 +18,66 @@ const rightNav = document.querySelector('.right');
 function fetchNav() {
     let url = ` http://localhost:3000/navUl`;
     fetch(url).then((response) => response.json())
-    .then((navs) =>{
-        let navUlist = '';
-       
+        .then((navs) => {
+            let navUlist = '';
 
-        navs.forEach((nav) =>{
-             let {id, path, title} = nav;
-            navUlist += `
+
+            navs.forEach((nav) => {
+                let { id, path, title } = nav;
+                navUlist += `
        
             <li><a href="${path}?id=${id}">${title}</a></li>
         
         `
-        pageList.innerHTML = navUlist;
-        })
-    });
+                pageList.innerHTML = navUlist;
+            })
+        });
 
 }
 
 function rightNavLinks() {
     let url = ` http://localhost:3000/navLinks`;
     fetch(url).then((response) => response.json())
-    .then((links) =>{
-        let listDiv = '';
-       
+        .then((links) => {
+            let listDiv = '';
 
-        links.forEach((link) =>{
-             let {id, path, image, alt} = link;
-            listDiv += `
+
+            links.forEach((link) => {
+                let { id, path, image, alt } = link;
+                listDiv += `
             <div>
             <a href="${path}">
                 <img src="${image}?id=${id}"  alt="${alt}" />
             </a>
             </div>
         `
-        rightNav.innerHTML = listDiv;
-        })
-    });
+                rightNav.innerHTML = listDiv;
+            })
+        });
 
 };
 
 // SEARCH BAR
-searchImage.addEventListener("submit", async(e)=>{
-    try{
+searchImage.addEventListener("submit", async (e) => {
+    try {
         e.preventDefault()
-     
-    }catch(error){
+
+    } catch (error) {
         console.log(error)
     };
 });
 console.log(searchImage)
 
-const blogContentWrapper = async () =>{
-    try{
+const blogContentWrapper = async () => {
+    try {
         let blogData = `http://localhost:3000/blog`;
         const response = await fetch(blogData)
         const blogContentWrapper = await response.json()
 
         let elem = ''
-        blogContentWrapper.forEach((blog) =>{
-            let {id, title, body, link, image, category:{portfolio, store}, date:{calender, availability}, personel:{name, statute}} = blog;
-           
+        blogContentWrapper.forEach((blog) => {
+            let { id, title, body, link, image, category: { portfolio, store }, date: { calender, availability }, personel: { name, statute } } = blog;
+
             elem += `
                 <div class="blogcontainer">
                     <img class="blog-img"
@@ -113,35 +113,35 @@ const blogContentWrapper = async () =>{
             `
             leftContainer.innerHTML = elem;
 
-            button1.addEventListener('click', ()=>{
+            button1.addEventListener('click', () => {
                 window.location = './blog.html';
             })
-            button2.addEventListener('click', ()=>{
+            button2.addEventListener('click', () => {
                 window.location = './blog2.html';
             })
-            button3.addEventListener('click', ()=>{
+            button3.addEventListener('click', () => {
                 window.location = './blog3.html';
             })
-            buttonNext.addEventListener('click', ()=>{
+            buttonNext.addEventListener('click', () => {
                 window.location = './blognext.html';
             })
-           
+
         })
-    }catch(error){
+    } catch (error) {
         console.log(error)
     };
 };
 
-const catalogs = async () =>{
-    try{
+const catalogs = async () => {
+    try {
         let catalogData = `http://localhost:3000/categories`
         const response = await fetch(catalogData)
         const catalogs = await response.json()
 
         let div = ''
-        catalogs.forEach((catalog) =>{
-            let {id, title, number} = catalog;
-            
+        catalogs.forEach((catalog) => {
+            let { id, title, number } = catalog;
+
             div += `
              
         <div>
@@ -150,24 +150,24 @@ const catalogs = async () =>{
          </div>
             `
             rightCat.innerHTML = div;
-           
+
         })
-    }catch(error){
+    } catch (error) {
         console.log(error)
     };
 };
 
 
-const posts = async () =>{
-    try{
+const posts = async () => {
+    try {
         let postData = ` http://localhost:3000/postsData`
         const response = await fetch(postData)
         const posts = await response.json()
-        
+
         let container = ''
-        posts.forEach((post) =>{
-            let {id, title, image, span} = post;
-            
+        posts.forEach((post) => {
+            let { id, title, image, span } = post;
+
             container += `
             <div class="post">
                         <img src="${image}?id=${id}"
@@ -182,11 +182,11 @@ const posts = async () =>{
                         </div>
                     </div>
             `
-           
+
             rightPost.innerHTML = container;
-           
+
         })
-    }catch(error){
+    } catch (error) {
         console.log(error)
     };
 };

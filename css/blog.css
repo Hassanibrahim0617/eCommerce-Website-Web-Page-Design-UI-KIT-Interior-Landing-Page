@@ -153,7 +153,7 @@ nav .right img {
 }
 
 .leftwrapper {
-    width: 65%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -262,7 +262,7 @@ nav .right img {
 
 /* RIGHT CONTAINER */
 .rightcontainer {
-    width: 20%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     gap: 5rem;
