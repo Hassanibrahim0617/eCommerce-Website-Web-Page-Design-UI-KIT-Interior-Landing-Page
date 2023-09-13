@@ -2,7 +2,6 @@
 const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
 const formPayment = document.querySelector('.forminput');
-const countryRegion = document.querySelector(".rectangle-539")
 const firstname = document.querySelector('.rectangle-53');
 const lastname = document.querySelector('.rectangle-532');
 const companyName = document.querySelector('.rectangle-54');
@@ -18,51 +17,54 @@ const footerForm = document.querySelector('.footer-form');
 const smallMsg = document.querySelector('small');
 const pageList = document.querySelector('ul');
 const rightNav = document.querySelector('.right');
+const countryRegion = document.querySelector(".rectangle-539");
 
 
 // NAV LINKS
 function fetchNav() {
     let url = ` http://localhost:3000/navUl`;
     fetch(url).then((response) => response.json())
-    .then((navs) =>{
-        let navUlist = '';
-       
+        .then((navs) => {
+            let navUlist = '';
 
-        navs.forEach((nav) =>{
-             let {id, path, title} = nav;
-            navUlist += `
+
+            navs.forEach((nav) => {
+                let { id, path, title } = nav;
+                navUlist += `
        
             <li><a href="${path}?id=${id}">${title}</a></li>
         
         `
-        pageList.innerHTML = navUlist;
-        })
-    });
+                pageList.innerHTML = navUlist;
+            })
+        });
 
 }
 
 function rightNavLinks() {
     let url = ` http://localhost:3000/navLinks`;
     fetch(url).then((response) => response.json())
-    .then((links) =>{
-        let listDiv = '';
-       
+        .then((links) => {
+            let listDiv = '';
 
-        links.forEach((link) =>{
-             let {id, path, image, alt} = link;
-            listDiv += `
+
+            links.forEach((link) => {
+                let { id, path, image, alt } = link;
+                listDiv += `
             <div>
             <a href="${path}">
                 <img src="${image}?id=${id}"  alt="${alt}" />
             </a>
             </div>
         `
-        rightNav.innerHTML = listDiv;
-        })
-    });
+                rightNav.innerHTML = listDiv;
+            })
+        });
 
 };
 
+
+// FORM PAYMENT AND COUNTRY LIST
 formPayment.addEventListener('submit', (e) => {
     try {
         e.preventDefault()
@@ -93,7 +95,7 @@ formPayment.addEventListener('submit', (e) => {
             displayError.textContent = 'successful';
         }
 
-        let formData = new FormData(formPayment);
+        let formData = new FormData(formPayment);b
         let formDataObj = Object.fromEntries(formData);
         localStorage.setItem("input", JSON.stringify(formDataObj));
 
@@ -101,32 +103,40 @@ formPayment.addEventListener('submit', (e) => {
             method: 'POST',
             body: JSON.stringify(formDataObj),
             headers: { 'content-type': 'application/json' }
-        })
+        });
+
 
     } catch (error) {
         console.log(error)
     };
 });
 
-let countriesName = ` http://localhost:3000/countries`
+
+// COUNTRY LIST
+
 const country = async () => {
+    let countriesName = ` http://localhost:3000/countries`;
     try {
         const response = await fetch(countriesName)
-        const country = await response.json()
+        const countryLists = await response.json()
         countries = ''
+        countryLists.forEach((list) => {
+            let {text, value} = list;
         countries += `
-         for (var i = 0; i < country.length; i++) {
-            country[i].image = 'https://www.countryflags.io/' + country[i].value.toLowerCase() + '/shiny/24.png';
-        }
+        <option value="${value}">${text}</option>
         `
 
         countryRegion.innerHTML = countries
-        console.log(countries)
+        
+        });
+      
 
     } catch (error) {
         console.log(error)
     }
+
 };
+country()
 
 //  FOOTER FORM
 footerForm.addEventListener('submit', (e) => {

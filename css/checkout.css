@@ -186,6 +186,17 @@ nav .right img {
 .forminput input {
   padding: 15px;
   margin-top: 1rem;
+  color: #9f9f9f;
+  text-align: left;
+  font: 400 16px "Poppins", sans-serif;
+}
+
+.forminput select {
+  padding: 15px;
+  color: #9f9f9f;
+  text-align: left;
+  font: 400 16px "Poppins", sans-serif;
+  margin-top: 1rem;
 }
 
 .name{

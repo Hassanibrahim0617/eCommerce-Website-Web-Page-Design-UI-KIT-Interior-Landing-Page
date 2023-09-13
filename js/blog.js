@@ -55,22 +55,20 @@ function rightNavLinks() {
             })
         });
 
+
+
 };
 
-// SEARCH BAR
-searchImage.addEventListener("submit", async (e) => {
+// BLOGS
+const blogContentWrapper = async (term) => {
+    let blogData = `http://localhost:3000/blog`;
+    
+    if(term){
+         blogData += `/category/${term}`;
+    }
+ 
     try {
-        e.preventDefault()
-
-    } catch (error) {
-        console.log(error)
-    };
-});
-console.log(searchImage)
-
-const blogContentWrapper = async () => {
-    try {
-        let blogData = `http://localhost:3000/blog`;
+        
         const response = await fetch(blogData)
         const blogContentWrapper = await response.json()
 
@@ -132,9 +130,21 @@ const blogContentWrapper = async () => {
     };
 };
 
+// SEARCH BAR
+searchImage.addEventListener("submit", async (e) => {
+    e.preventDefault();
+     const term  = e.currentTarget.search.value;
+     
+     blogContentWrapper(term);
+ });
+
+
+
 const catalogs = async () => {
+    let catalogData = `http://localhost:3000/categories`
+   
     try {
-        let catalogData = `http://localhost:3000/categories`
+        
         const response = await fetch(catalogData)
         const catalogs = await response.json()
 
@@ -156,6 +166,8 @@ const catalogs = async () => {
         console.log(error)
     };
 };
+
+
 
 
 const posts = async () => {

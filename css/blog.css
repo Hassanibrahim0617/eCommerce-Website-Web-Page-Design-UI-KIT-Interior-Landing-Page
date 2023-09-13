@@ -51,7 +51,7 @@ nav .left {
     display: flex;
     gap: 10px;
     align-items: center;
- }
+}
 
 nav .right a {
     text-decoration: none;
@@ -60,6 +60,73 @@ nav .right a {
 nav .right img {
     padding-left: 1.5rem;
     height: 22px;
+}
+
+.search_modal {
+    display: none;
+}
+
+.search_modal.createmodal {
+    padding: 1rem;
+    background-color: #7b797962;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.modal {
+    background-color: rgba(255, 255, 255, 0.998);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    margin: auto;
+    border-radius: 5px;
+    width: 430px;
+    padding-left: 1rem;
+}
+
+.fa-solid {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 3rem;
+    justify-content: center;
+    margin: 1rem 1rem 0 1rem;
+padding-bottom: 1rem;
+}
+
+.modal form #searchinput {
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #9F9F9F;
+    outline: #9F9F9F;
+    color: #000;
+    
+}
+
+.searchicon {
+    background-color: #B88E2F;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    text-align: center;
+    padding: 8px 25px;
+    width: 100px;
+    height: 30px;
 }
 
 .hero_checkout {
