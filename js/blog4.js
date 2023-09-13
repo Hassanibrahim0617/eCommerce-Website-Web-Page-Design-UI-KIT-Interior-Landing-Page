@@ -54,6 +54,7 @@ function rightNavLinks() {
         rightNav.innerHTML = listDiv;
         })
     });
+    
 
 };
 
