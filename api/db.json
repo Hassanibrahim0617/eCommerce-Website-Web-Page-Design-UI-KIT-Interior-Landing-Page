@@ -1595,21 +1595,6 @@
       "province": "lagos",
       "directBank": "direct-bank-transfer2",
       "id": 1
-    },
-    {
-      "firstname": "mark",
-      "lastname": "love",
-      "companyname": "mark & love production",
-      "country": "bangladesh",
-      "address": "holloway road",
-      "zipcode": "00011",
-      "town": "kuala lumpur",
-      "phonenumber": "909848928556",
-      "email": "mail@mail.com",
-      "information": "",
-      "province": "kuala lumpur",
-      "bankTransfer": "cash-on-delivery",
-      "id": 2
     }
   ],
   "contact": [
@@ -1619,163 +1604,12 @@
       "subject": "john doe",
       "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "id": 1
-    },
-    {
-      "yourname": "bunny love",
-      "email": "mail@mail.com",
-      "subject": "optional",
-      "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris sit amet massa vitae tortor. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Adipiscing diam donec adipiscing tristique risus nec feugiat in. Lobortis scelerisque fermentum dui faucibus in ornare quam. Nunc aliquet bibendum enim facilisis gravida neque. Eget egestas purus viverra accumsan in nisl.",
-      "id": 2
-    },
-    {
-      "yourname": "",
-      "email": "",
-      "subject": "",
-      "message": "",
-      "id": 3
-    },
-    {
-      "yourname": "",
-      "email": "",
-      "subject": "",
-      "message": "",
-      "id": 4
-    },
-    {
-      "yourname": "",
-      "email": "",
-      "subject": "",
-      "message": "",
-      "id": 5
-    },
-    {
-      "yourname": "",
-      "email": "",
-      "subject": "",
-      "message": "",
-      "id": 6
     }
   ],
   "subscribeMail": [
     {
       "emailaddress": "jdoe@gmail.com",
       "id": 1
-    },
-    {
-      "emailaddress": "brosburning@yahoo.com",
-      "id": 2
-    },
-    {
-      "emailaddress": "hassanibrahim0617@gmail.com",
-      "id": 3
-    },
-    {
-      "emailaddress": "mail@mail.com",
-      "id": 4
-    },
-    {
-      "emailaddress": "s@s.com",
-      "id": 5
-    },
-    {
-      "emailaddress": "sql@mail.com",
-      "id": 6
-    },
-    {
-      "emailaddress": "",
-      "id": 7
-    },
-    {
-      "emailaddress": "",
-      "id": 8
-    },
-    {
-      "emailaddress": "",
-      "id": 9
-    },
-    {
-      "emailaddress": "",
-      "id": 10
-    },
-    {
-      "emailaddress": "",
-      "id": 11
-    },
-    {
-      "emailaddress": "",
-      "id": 12
-    },
-    {
-      "emailaddress": "",
-      "id": 13
-    },
-    {
-      "emailaddress": "",
-      "id": 14
-    },
-    {
-      "emailaddress": "",
-      "id": 15
-    },
-    {
-      "emailaddress": "",
-      "id": 16
-    },
-    {
-      "emailaddress": "",
-      "id": 17
-    },
-    {
-      "emailaddress": "",
-      "id": 18
-    },
-    {
-      "emailaddress": "",
-      "id": 19
-    },
-    {
-      "emailaddress": "",
-      "id": 20
-    },
-    {
-      "emailaddress": "",
-      "id": 21
-    },
-    {
-      "emailaddress": "brosburning@yahoo.com",
-      "id": 22
-    },
-    {
-      "emailaddress": "",
-      "id": 23
-    },
-    {
-      "emailaddress": "",
-      "id": 24
-    },
-    {
-      "emailaddress": "",
-      "id": 25
-    },
-    {
-      "emailaddress": "",
-      "id": 26
-    },
-    {
-      "emailaddress": "",
-      "id": 27
-    },
-    {
-      "emailaddress": "",
-      "id": 28
-    },
-    {
-      "emailaddress": "",
-      "id": 29
-    },
-    {
-      "emailaddress": "",
-      "id": 30
     }
   ],
   "displayFurniture": [
