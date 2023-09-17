@@ -93,6 +93,29 @@ function cart() {
   };
   cart()
 
+  function searchNav() {
+    const searchIconBtn = document.querySelector('.icon-search');
+    const closeIconBtn = document.querySelector('.fa-solid');
+    const searchInput = document.querySelector('.search_modal');
+   
+    searchIconBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+     
+      searchInput.classList.add('createmodal')
+      searchInput.style.display = 'block';
+     
+    });
+  
+    // CLOSE BUTTON 
+    closeIconBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      searchInput.classList.remove('createmodal')
+      searchInput.style.display = 'none';
+    });
+  
+  };
+  searchNav();
+
 // SEARCH BAR
 searchImage.addEventListener("submit", async(e)=>{
     try{

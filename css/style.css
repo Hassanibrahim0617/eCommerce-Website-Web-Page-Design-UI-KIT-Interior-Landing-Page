@@ -254,7 +254,7 @@ font-size: 12px;
   display: none;
 }
 
-.search_modal.displaymodal {
+.search_modal.active {
   padding: 1rem;
   background-color: #7b797962;
   position: absolute;
