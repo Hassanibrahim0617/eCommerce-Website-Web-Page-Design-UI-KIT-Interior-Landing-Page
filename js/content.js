@@ -46,11 +46,46 @@ function rightNavLinks() {
             </a>
             </div>
         `
-        rightNav.innerHTML = listDiv;
+        // rightNav.innerHTML = listDiv;
         })
     });
 
 };
+
+function cart() {
+    const shopCart = document.querySelector('.shop-cart');
+    const closeCart = document.querySelector('.shopping_heading button');
+    const shoppingCart = document.querySelector('.shopping_wrapper');
+   
+    shopCart.addEventListener('click', (e) => {
+        e.stopPropagation();
+        shoppingCart.classList.add('create')
+        shoppingCart.classList.contains('create')
+      
+    });
+  
+    //  CLOSE ICON
+    closeCart.addEventListener('click', (e) => {
+        e.stopPropagation();
+        shoppingCart.classList.remove('create')
+    });
+  
+    const cartBtn = document.querySelector('.cartbtn');
+    cartBtn.addEventListener('click', () => {
+        window.location = './cart.html';
+    });
+  
+    const checkoutBtn = document.querySelector('.checkoutbtn');
+    checkoutBtn.addEventListener('click', () => {
+        window.location = './checkout.html';
+    });
+  
+    const comparisonBtn = document.querySelector('.comparisonbtn');
+    comparisonBtn.addEventListener('click', () => {
+        window.location = './compare.html';
+    });
+  };
+  cart()
 
 
 // SINGLE POST
