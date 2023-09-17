@@ -54,6 +54,8 @@ function rightNavLinks() {
 
     });
 
+    
+
 };
 
 
@@ -102,20 +104,19 @@ function searchNav() {
   const searchIconBtn = document.querySelector('.icon-search');
   const closeIconBtn = document.querySelector('.fa-solid');
   const searchInput = document.querySelector('.search_modal');
-  const modal = document.querySelector('.displaymodal');
-  console.log(modal)
+ 
   searchIconBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    console.log('search button clicked but i am finding it hard to display the search bar!')
-    searchInput.classList.add('displaymodal')
-    // searchInput.classList.contains('createmodal')
-  //  console.log('icon clicked')
+   
+    searchInput.classList.add('active')
+    searchInput.style.display = 'block';
   });
 
   // CLOSE BUTTON 
   closeIconBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-    searchInput.classList.remove('createmodal')
+    searchInput.classList.remove('active')
+    searchInput.style.display = 'none';
   });
 
 };
