@@ -53,8 +53,18 @@ nav .left {
   align-items: center;
 }
 
-nav .right a {
+/* nav .right a {
   text-decoration: none;
+} */
+
+nav .right div button{
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+nav .right div button:hover{
+  opacity: 70%;
 }
 
 nav .right img {
@@ -63,6 +73,253 @@ nav .right img {
 }
 
 /* MAIN BODY */
+
+/* CART DISPLAY */
+.shopping_wrapper{
+  display: none;
+}
+
+.shopping_wrapper.create{
+  position: absolute;
+  top: 0;
+  right: 0;
+ background-color: #7b797962;
+ width: 100%;
+ height: 200vh;
+ display: flex;
+ flex-direction: column;
+ align-items: end;
+ justify-content: center;
+ z-index: 5;
+  padding: 0;
+  margin: 0;
+}
+
+.shopping_container{
+  background-color: #fff;
+ padding:0 1rem 0 2rem;
+  margin: 0 0 26rem 0;
+  height: 60%;
+}
+
+.top_container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
+  justify-content: center;
+}
+
+.top_container .shopping_heading{
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.top_container .shopping_heading h1{
+  font-weight: 600;
+  text-align: left;
+  
+}
+
+.top_container .shopping_heading button{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #fff;
+}
+
+.top_container .shopping_heading button:hover{
+opacity: 50%;
+}
+
+.line-11 {
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 1px 0 0 0;
+  width: 287px;
+  height: 0px;
+  position: relative;
+}
+
+.shopping_info{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0 0 0;
+}
+
+.main_image{
+  width: 100px;
+  height: 100px;
+}
+
+.main_image img{
+  width: 100%;
+}
+
+.info_p{
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  margin-right: 2.5rem;
+}
+
+.info_p p:nth-child(1){
+  font-size: 15px;
+  font-weight: 400;
+
+}
+
+.info_p p span:nth-child(2){
+font-size: 12px;
+font-weight: 300;
+margin: 0 5px;
+}
+
+.info_p p span:nth-child(3){
+color: #b88e2f;
+margin: 0 5px;
+font-weight: 500;
+font-size: 12px;
+}
+
+.cancel_image button{
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding-left: 1rem;
+  background-color: #fff;
+}
+
+.bottom_container{
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bottom_container .shopping_price{
+  display: flex;
+  gap: 6rem;
+}
+
+.bottom_container .shopping_price p:nth-child(1){
+  color: #000000;
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.bottom_container .shopping_price p:nth-child(2){
+  color: #b88e2f;
+  text-align: left;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.line-12 {
+  border-style: solid;
+  border-color: #d9d9d9;
+  border-width: 1px 0 0 0;
+  width: 417px;
+  height: 0px;
+  position: relative;
+}
+
+.shopping_buttons{
+  display: flex;
+  gap: 1rem;
+}
+
+.shopping_buttons button{
+  border-radius: 50px;
+  bottom: 1px solid #444;
+  cursor: pointer;
+  padding: 6px 30px;
+  background-color: #fff;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+/* CART DISPLAY */
+
+/* MODAL DESIGN */
+.search_modal {
+  display: none;
+}
+
+.search_modal.displaymodal {
+  padding: 1rem;
+  background-color: #7b797962;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  z-index: 5;
+}
+
+.modal {
+  background-color: rgba(255, 255, 255, 0.998);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  margin: auto;
+  border-radius: 5px;
+  width: 430px;
+  padding-left: 1rem;
+}
+
+.fa-solid {
+  padding-top: 5px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 1rem 0 1rem;
+padding-bottom: 1rem;
+}
+
+.modal form #searchinput {
+  width: 250px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #9F9F9F;
+  outline: #9F9F9F;
+  color: #000;
+  
+}
+
+.searchicon {
+  background-color: #B88E2F;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #000;
+  text-align: center;
+  padding: 8px 25px;
+  width: 100px;
+  height: 30px;
+}
+
+
 main .hero_section {
   max-width: 1270px;
   height: 631.93px;
@@ -125,6 +382,10 @@ main .hero_section {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+}
+
+.hero_section .rectangle_77 button:hover{
+  opacity: 70%;
 }
 
 main .range {
@@ -341,6 +602,10 @@ main .heading p {
   text-align: center;
 }
 
+#product-wrapper .showMore button:hover{
+  opacity: 70%;
+}
+
 /* PRODUCT SECTION ENDS HERE */
 
 /* ROOMS */
@@ -375,22 +640,25 @@ main .heading p {
   padding-bottom: 1rem;
 }
 
-.rectangle-3 {
-  background: var(--primary, #b88e2f);
+/* .rectangle-3 {
   width: 176px;
   height: 48px;
   position: relative;
-}
+} */
 
 .explore-more {
+  background: var(--primary, #b88e2f);
   color: var(--color-white, #ffffff);
   text-align: left;
   font: 600 16px/150% "Poppins", sans-serif;
   position: relative;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+ padding: 0.75rem 2rem;
+ border: none;
+ cursor: pointer;
+}
+
+.explore-more:hover{
+  opacity: 70%;
 }
 
 .imagescontainer {
@@ -448,10 +716,11 @@ main .heading p {
   position: absolute;
   left: 0px;
   top: 0px;
+  
 }
 
 .ellipse-1 {
-  background: var(--primary, #b88e2f);
+  background: var(--color-gray-5, #d8d8d8);
   border-radius: 50%;
   border-style: solid;
   border-color: var(--primary, #b88e2f);
@@ -461,6 +730,7 @@ main .heading p {
   position: absolute;
   left: 8px;
   top: 8px;
+  cursor: pointer;
 }
 
 .ellipse-12 {
@@ -470,6 +740,8 @@ main .heading p {
   width: 11px;
   height: 11px;
   position: relative;
+  cursor: pointer;
+  border: none;
 }
 
 .ellipse-22 {
@@ -479,6 +751,8 @@ main .heading p {
   width: 11px;
   height: 11px;
   position: relative;
+  cursor: pointer;
+  border: none;
 }
 
 .ellipse-3 {
@@ -488,6 +762,12 @@ main .heading p {
   width: 11px;
   height: 11px;
   position: relative;
+  cursor: pointer;
+  border: none;
+}
+
+.ellipse-3:focus, .ellipse-22:focus, .ellipse-12:focus, .ellipse-1:focus{
+  background: var(--primary, #b88e2f);
 }
 
 /* SHARE SECTION  */

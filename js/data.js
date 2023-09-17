@@ -2,8 +2,8 @@
 const footerGroup24 = document.querySelector('.group-24');
 const footerGroup25 = document.querySelector('.group-25');
 const formPayment = document.querySelector('.forminput');
-const firstname = document.querySelector('.rectangle-53');
-const lastname = document.querySelector('.rectangle-532');
+const firstName = document.querySelector('.rectangle-53');
+const lastName = document.querySelector('.rectangle-532');
 const companyName = document.querySelector('.rectangle-54');
 const streetAddress = document.querySelector('.rectangle-533');
 const zipCode = document.querySelector('.rectangle-534');
@@ -11,6 +11,7 @@ const phoneNumber = document.querySelector('.rectangle-536');
 const emailAddress = document.querySelector('.rectangle-537');
 const town = document.querySelector('.rectangle-535');
 const bankTransfer = document.querySelector('#ellipse-12');
+const province = document.querySelector('.rectangle-5310');
 const directBank = document.querySelector('#ellipse-13');
 const displayError = document.querySelector('.small');
 const footerForm = document.querySelector('.footer-form');
@@ -18,7 +19,7 @@ const smallMsg = document.querySelector('small');
 const pageList = document.querySelector('ul');
 const rightNav = document.querySelector('.right');
 const countryRegion = document.querySelector(".rectangle-539");
-
+const shoppingCart = document.querySelector('.shopping_wrapper')
 
 // NAV LINKS
 function fetchNav() {
@@ -43,72 +44,110 @@ function fetchNav() {
 
 function rightNavLinks() {
     let url = ` http://localhost:3000/navLinks`;
+
     fetch(url).then((response) => response.json())
         .then((links) => {
             let listDiv = '';
 
-
             links.forEach((link) => {
-                let { id, path, image, alt } = link;
+                let { id, path, image, alt, classname } = link;
+
                 listDiv += `
-            <div>
-            <a href="${path}">
-                <img src="${image}?id=${id}"  alt="${alt}" />
-            </a>
-            </div>
-        `
-                rightNav.innerHTML = listDiv;
-            })
+                <div>
+                <a href="${path}">
+                    <img class="${classname}" src="${image}?id=${id}"  alt="${alt}" />
+                </a>
+                </div>
+                 `
+
+
+                // rightNav.innerHTML = listDiv;
+            });
         });
+
 
 };
 
+function cart() {
+    const shopCart = document.querySelector('.shop-cart');
+    const closeCart = document.querySelector('.shopping_heading button');
+    const shoppingCart = document.querySelector('.shopping_wrapper');
+   
+    shopCart.addEventListener('click', (e) => {
+        e.stopPropagation();
+        shoppingCart.classList.add('create')
+        shoppingCart.classList.contains('create')
+      
+    });
+
+    //  CLOSE ICON
+    closeCart.addEventListener('click', (e) => {
+        e.stopPropagation();
+        shoppingCart.classList.remove('create')
+    });
+
+    const cartBtn = document.querySelector('.cartbtn');
+    cartBtn.addEventListener('click', () => {
+        window.location = './cart.html';
+    });
+
+    const checkoutBtn = document.querySelector('.checkoutbtn');
+    checkoutBtn.addEventListener('click', () => {
+        window.location = './checkout.html';
+    });
+
+    const comparisonBtn = document.querySelector('.comparisonbtn');
+    comparisonBtn.addEventListener('click', () => {
+        window.location = './compare.html';
+    });
+};
+cart()
 
 // FORM PAYMENT AND COUNTRY LIST
 formPayment.addEventListener('submit', (e) => {
-    try {
-        e.preventDefault()
-        if (
-            e.currentTarget.firstname.value.trim() === '' ||
-            e.currentTarget.lastname.value.trim() === '' ||
-            e.currentTarget.country.value.trim() === '' ||
-            e.currentTarget.companyname.value.trim() === '' ||
-            e.currentTarget.address.value.trim() === '' ||
-            e.currentTarget.zipcode.value.trim() === '' ||
-            e.currentTarget.town.value.trim() === '' ||
-            e.currentTarget.phonenumber.value.trim() === '' ||
-            e.currentTarget.email.value.trim() === '' ||
-            e.currentTarget.province.value.trim() === '' ||
-            e.currentTarget.information.value.trim() === '' ||
-            e.currentTarget.bankTransfer.value === '' ||
-            e.currentTarget.directBank.value === ''
-        ) {
+    e.preventDefault()
 
-            displayError.textContent = 'Fill the apropriate information';
-            setTimeout(function () {
-                displayError.style.display = 'none';
-                window.location = ' ./checkout.html'
-            }, 3000);
+    if (
+        firstName.value.trim() === '' ||
+        lastName.value.trim() === '' ||
+        countryRegion.value.trim() === '' ||
+        companyName.value.trim() === '' ||
+        streetAddress.value.trim() === '' ||
+        zipCode.value.trim() === '' ||
+        town.value.trim() === '' ||
+        phoneNumber.value.trim() === '' ||
+        emailAddress.value.trim() === '' ||
+        province.value.trim() === '' ||
+        bankTransfer.value === '' ||
+        directBank.value === ''
 
-        } else {
-            displayError.style.color = 'green';
-            displayError.textContent = 'successful';
-        }
+    ) {
 
-        let formData = new FormData(formPayment);b
-        let formDataObj = Object.fromEntries(formData);
-        localStorage.setItem("input", JSON.stringify(formDataObj));
+        displayError.textContent = 'Fill the apropriate information';
+        setTimeout(function () {
+            displayError.style.display = 'none';
+            window.location = ' ./checkout.html'
+        }, 3000);
 
-        fetch(`http://localhost:3000/checkout`, {
-            method: 'POST',
-            body: JSON.stringify(formDataObj),
-            headers: { 'content-type': 'application/json' }
-        });
-
-
-    } catch (error) {
-        console.log(error)
+    } else {
+        displayError.style.color = 'green';
+        displayError.textContent = 'successful';
     };
+
+    //    let formInput = new FormData(formPayment);
+
+    //     let formDataObj = Object.fromEntries(formInput);
+
+    localStorage.setItem('payment', JSON.stringify(formPayment));
+
+    fetch(`http://localhost:3000/checkout`, {
+        method: 'POST',
+        body: JSON.stringify(formPayment),
+        headers: { 'content-type': 'application/json' }
+    });
+
+
+
 });
 
 
@@ -121,15 +160,15 @@ const country = async () => {
         const countryLists = await response.json()
         countries = ''
         countryLists.forEach((list) => {
-            let {text, value} = list;
-        countries += `
+            let { text, value } = list;
+            countries += `
         <option value="${value}">${text}</option>
         `
 
-        countryRegion.innerHTML = countries
-        
+            countryRegion.innerHTML = countries
+
         });
-      
+
 
     } catch (error) {
         console.log(error)
@@ -173,7 +212,7 @@ footerForm.addEventListener('submit', (e) => {
 });
 
 function isValidMail(emailaddress) {
-    /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailaddress);
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(emailaddress);
 };
 
 
@@ -226,7 +265,11 @@ const postlists2 = async () => {
         console.log(error)
     }
 
-}
+};
+
+
+
+
 
 
 

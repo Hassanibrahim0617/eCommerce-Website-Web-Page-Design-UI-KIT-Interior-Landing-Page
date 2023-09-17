@@ -1595,6 +1595,30 @@
       "province": "lagos",
       "directBank": "direct-bank-transfer2",
       "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
     }
   ],
   "contact": [
@@ -1618,6 +1642,18 @@
     {
       "emailaddress": "",
       "id": 3
+    },
+    {
+      "emailaddress": "",
+      "id": 4
+    },
+    {
+      "emailaddress": "mail@mail.com1",
+      "id": 5
+    },
+    {
+      "emailaddress": "",
+      "id": 6
     }
   ],
   "displayFurniture": [
@@ -1685,25 +1721,29 @@
       "id": 1,
       "path": "",
       "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991033/images_folder/t13roe8xe31o0m0vnnxk.png",
-      "alt": "mdi_account-alert-outline"
+      "alt": "mdi_account-alert-outline",
+      "classname": "account-alert"
     },
     {
       "id": 2,
       "path": "",
       "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991025/images_folder/qtylpkjixnjzj2qzukxb.png",
-      "alt": "akar-icons_search"
+      "alt": "akar-icons_search",
+      "classname": "icon-search"
     },
     {
       "id": 3,
       "path": "",
       "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991019/images_folder/x3fddqy7wrysdu1rlj5q.svg",
-      "alt": "akar-icons_heart"
+      "alt": "akar-icons_heart",
+      "classname": "icon-heart"
     },
     {
       "id": 4,
-      "path": "./cart.html",
+      "path": "",
       "image": "https://res.cloudinary.com/diuay8wri/image/upload/v1692991033/images_folder/bubbpfdjxlpdud2wjubs.png",
-      "alt": "ant-design_shopping-cart-outlined"
+      "alt": "ant-design_shopping-cart-outlined",
+      "classname": "shop-cart"
     }
   ]
 }

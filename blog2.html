@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e commerce blog</title>
     <link rel="stylesheet" href="./css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -20,8 +21,121 @@
             </div>
         </div>
         <div class="right">
+            <div>
+                <button>
+                  <img class="account-alert" src="https://res.cloudinary.com/diuay8wri/image/upload/v1692991033/images_folder/t13roe8xe31o0m0vnnxk.png" alt="${alt}" />
+                </button>
+                <button>
+                  <img class="icon-search" src="https://res.cloudinary.com/diuay8wri/image/upload/v1692991025/images_folder/qtylpkjixnjzj2qzukxb.png" alt="${alt}" />
+                </button>
+                <button>
+                  <img class="icon-heart" src="https://res.cloudinary.com/diuay8wri/image/upload/v1692991019/images_folder/x3fddqy7wrysdu1rlj5q.svg" alt="${alt}" />
+                </button>
+                <button>
+                  <img class="shop-cart" src="https://res.cloudinary.com/diuay8wri/image/upload/v1692991033/images_folder/bubbpfdjxlpdud2wjubs.png" alt="${alt}" />
+                </button>
+              </div>
         </div>
     </nav>
+
+      <!-- SEARCH MODAL -->
+      <div class="search_modal ">
+        <div class="modal">
+            <i class="fa-solid fa-square-xmark"></i>
+            <form>
+                <input type="search" name="navsearch" id="searchinput" placeholder="Search here">
+                <button type="submit" class="searchicon">
+                    Search
+                </button>
+            </form>
+        </div>
+    </div>
+  
+
+    <!-- CART DISPLAY START -->
+    <div class="shopping_wrapper ">
+        <div class="shopping_container">
+          <div class="top_container">
+            <div class="shopping_heading">
+              <h1>
+                Shopping Cart
+              </h1>
+              <button>
+                <img src="https://res.cloudinary.com/diuay8wri/image/upload/v1694706108/images_folder/Group_km8rce.svg"
+                  alt="shopping-bag">
+              </button>
+            </div>
+            <div class="line-11"></div>
+            <div class="shopping_info">
+              <div class="main_image">
+                <img
+                  src="https://res.cloudinary.com/diuay8wri/image/upload/v1692991018/images_folder/stpb3vjpefqkydzl9g4w.png"
+                  alt="asgaard-sofa">
+              </div>
+              <div class="info_p">
+                <p>
+                  Asgaard sofa
+                </p>
+                <p>
+                  <span> 1</span>
+                  <span>X</span>
+                  <span>Rs. 270,000.00</span>
+                </p>
+              </div>
+              <div class="cancel_image">
+                <button>
+                  <img src="https://res.cloudinary.com/diuay8wri/image/upload/v1694706108/images_folder/Vector_y3lvmi.svg"
+                    alt="cancel">
+                </button>
+  
+              </div>
+            </div>
+            <div class="shopping_info">
+              <div class="main_image">
+                <img
+                  src="https://res.cloudinary.com/diuay8wri/image/upload/v1692991018/images_folder/stpb3vjpefqkydzl9g4w.png"
+                  alt="asgaard-sofa">
+              </div>
+              <div class="info_p">
+                <p>
+                  Asgaard sofa
+                </p>
+                <p>
+                  <span> 1</span>
+                  <span>X</span>
+                  <span>Rs. 270,000.00</span>
+                </p>
+              </div>
+              <div class="cancel_image">
+                <button>
+                  <img src="https://res.cloudinary.com/diuay8wri/image/upload/v1694706108/images_folder/Vector_y3lvmi.svg"
+                    alt="cancel">
+                </button>
+  
+              </div>
+            </div>
+  
+            <div class="bottom_container">
+              <div class="shopping_price">
+                <p>Subtotal</p>
+                <p>Rs. 520,000.00</p>
+              </div>
+  
+              <div class="line-12"></div>
+  
+              <div class="shopping_buttons">
+                <button class="cartbtn">Cart</button>
+                <button class="checkoutbtn">Checkout</button>
+                <button class="comparisonbtn">Conparison</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <!-- CART DISPLAY CONTAINER END -->
+  
+  
 
     <main>
         <div class="hero_checkout">
