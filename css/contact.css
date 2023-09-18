@@ -51,17 +51,17 @@ nav .left {
     display: flex;
     gap: 10px;
     align-items: center;
-  }
-  
-  /* nav .right a {
+}
+
+/* nav .right a {
     text-decoration: none;
   } */
-  
-  nav .right div button{
-     border: none;
-     background-color: #fff;
-     cursor: pointer;
-  }
+
+nav .right div button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
 
 nav .right img {
     padding-left: 1.5rem;
@@ -112,7 +112,7 @@ nav .right img {
     gap: 1rem;
     justify-content: center;
     margin: 1rem 1rem 0 1rem;
-padding-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 .modal form #searchinput {
@@ -140,163 +140,163 @@ padding-bottom: 1rem;
 
 
 /* CART DISPLAY */
-.shopping_wrapper{
+.shopping_wrapper {
     display: none;
-  }
-  
-  .shopping_wrapper.create{
+}
+
+.shopping_wrapper.create {
     position: absolute;
     top: 0;
     right: 0;
-   background-color: #7b797962;
-   width: 100%;
-   height: 200vh;
-   display: flex;
-   flex-direction: column;
-   align-items: end;
-   justify-content: center;
-   z-index: 5;
+    background-color: #7b797962;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    z-index: 5;
     padding: 0;
     margin: 0;
-  }
-  
-  .shopping_container{
+}
+
+.shopping_container {
     background-color: #fff;
-   padding:0 1rem 0 2rem;
+    padding: 0 1rem 0 2rem;
     margin: 0 0 26rem 0;
     height: 60%;
-  }
-  
-  .top_container{
+}
+
+.top_container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: start;
     justify-content: center;
-  }
-  
-  .top_container .shopping_heading{
+}
+
+.top_container .shopping_heading {
     display: flex;
     align-items: center;
     gap: 7rem;
     justify-content: center;
     padding-top: 2rem;
-  }
-  
-  .top_container .shopping_heading h1{
+}
+
+.top_container .shopping_heading h1 {
     font-weight: 600;
     text-align: left;
-    
-  }
-  
-  .top_container .shopping_heading button{
+
+}
+
+.top_container .shopping_heading button {
     cursor: pointer;
     outline: none;
     border: none;
     background-color: #fff;
-  }
-  
-  .line-11 {
+}
+
+.line-11 {
     border-style: solid;
     border-color: #d9d9d9;
     border-width: 1px 0 0 0;
     width: 287px;
     height: 0px;
     position: relative;
-  }
-  
-  .shopping_info{
+}
+
+.shopping_info {
     display: flex;
     gap: 2rem;
     align-items: center;
     justify-content: center;
     padding: 1rem 0 0 0;
-  }
-  
-  .main_image{
+}
+
+.main_image {
     width: 100px;
     height: 100px;
-  }
-  
-  .main_image img{
+}
+
+.main_image img {
     width: 100%;
-  }
-  
-  .info_p{
+}
+
+.info_p {
     display: flex;
     flex-direction: column;
     gap: .7rem;
     margin-right: 2.5rem;
-  }
-  
-  .info_p p:nth-child(1){
+}
+
+.info_p p:nth-child(1) {
     font-size: 15px;
     font-weight: 400;
-  
-  }
-  
-  .info_p p span:nth-child(2){
-  font-size: 12px;
-  font-weight: 300;
-  margin: 0 5px;
-  }
-  
-  .info_p p span:nth-child(3){
-  color: #b88e2f;
-  margin: 0 5px;
-  font-weight: 500;
-  font-size: 12px;
-  }
-  
-  .cancel_image button{
+
+}
+
+.info_p p span:nth-child(2) {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0 5px;
+}
+
+.info_p p span:nth-child(3) {
+    color: #b88e2f;
+    margin: 0 5px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.cancel_image button {
     border: none;
     cursor: pointer;
     outline: none;
     padding-left: 1rem;
     background-color: #fff;
-  }
-  
-  .bottom_container{
+}
+
+.bottom_container {
     padding-top: 8rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-  
-  .bottom_container .shopping_price{
+}
+
+.bottom_container .shopping_price {
     display: flex;
     gap: 6rem;
-  }
-  
-  .bottom_container .shopping_price p:nth-child(1){
+}
+
+.bottom_container .shopping_price p:nth-child(1) {
     color: #000000;
     text-align: left;
     font-weight: 400;
     font-size: 16px;
-  }
-  
-  .bottom_container .shopping_price p:nth-child(2){
+}
+
+.bottom_container .shopping_price p:nth-child(2) {
     color: #b88e2f;
     text-align: left;
     font-weight: 600;
     font-size: 16px;
-  }
-  
-  .line-12 {
+}
+
+.line-12 {
     border-style: solid;
     border-color: #d9d9d9;
     border-width: 1px 0 0 0;
     width: 417px;
     height: 0px;
     position: relative;
-  }
-  
-  .shopping_buttons{
+}
+
+.shopping_buttons {
     display: flex;
     gap: 1rem;
-  }
-  
-  .shopping_buttons button{
+}
+
+.shopping_buttons button {
     border-radius: 50px;
     bottom: 1px solid #444;
     cursor: pointer;
@@ -306,10 +306,10 @@ padding-bottom: 1rem;
     font-size: 12px;
     font-weight: 400;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-  }
-  
-  /* CART DISPLAY */
-  
+}
+
+/* CART DISPLAY */
+
 
 .hero_checkout {
     background-image: url(https://res.cloudinary.com/diuay8wri/image/upload/v1692991095/images_folder/djrkirzuclhfm2xc6gnt.png);
@@ -434,7 +434,7 @@ padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
-   
+
 }
 
 .address,
@@ -488,7 +488,7 @@ padding-bottom: 1rem;
 
 /* FORM */
 
-.group-159{
+.group-159 {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -634,7 +634,7 @@ form textarea {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-   max-width: 1270px;
+    max-width: 1270px;
     height: 270px;
     position: relative;
 }
@@ -956,15 +956,15 @@ form textarea {
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-  
-  .enter-your-email-address {
+}
+
+.enter-your-email-address {
     color: #9f9f9f;
     border: none;
     outline: none;
     font: 400 14px "Poppins", sans-serif;
     margin-top: 0;
-  }
+}
 
 small {
     color: #f20b0b;
@@ -972,13 +972,14 @@ small {
     font-weight: 300;
 }
 
-.line{
+.line {
     display: flex;
     gap: 10px;
     position: absolute;
     left: 788.01px;
     top: 90px;
 }
+
 .line-2 {
     border-style: solid;
     border-color: #000000;
@@ -995,7 +996,7 @@ small {
     border-width: 1px 0 0 0;
     width: 75.01px;
     height: 0px;
-} 
+}
 
 .subscribe {
     color: #000000;

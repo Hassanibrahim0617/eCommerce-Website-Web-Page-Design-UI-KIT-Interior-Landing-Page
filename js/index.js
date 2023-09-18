@@ -9,7 +9,7 @@ const rightNav = document.querySelector('.right');
 const heroBtn = document.querySelector('.rectangle_77 button');
 const showMore = document.querySelector('.showMore');
 const exploreBtn = document.querySelector('.explore-more');
-
+const searchInput = document.querySelector('.search_modal');
 
 
 // NAV LINKS
@@ -54,11 +54,11 @@ function rightNavLinks() {
 
     });
 
-    
+
 
 };
 
-
+// CART NAV ICON
 function cart() {
   const shopCart = document.querySelector('.shop-cart');
   const closeCart = document.querySelector('.shopping_heading button');
@@ -78,7 +78,7 @@ function cart() {
   });
 
 
-// BOTTOM BUTTON
+  // BOTTOM BUTTON
   const cartBtn = document.querySelector('.cartbtn');
   cartBtn.addEventListener('click', () => {
     window.location = './cart.html';
@@ -96,18 +96,14 @@ function cart() {
 };
 cart()
 
-
-
-
-
 function searchNav() {
   const searchIconBtn = document.querySelector('.icon-search');
   const closeIconBtn = document.querySelector('.fa-solid');
-  const searchInput = document.querySelector('.search_modal');
- 
+  
+
   searchIconBtn.addEventListener('click', (e) => {
     e.stopPropagation();
-   
+
     searchInput.classList.add('active')
     searchInput.style.display = 'block';
   });
@@ -119,9 +115,45 @@ function searchNav() {
     searchInput.style.display = 'none';
   });
 
+  searchIconBtn.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const find = e.currentTarget.search.value;
+    search(find);
+
+  })
+
 };
 searchNav();
 
+
+const search = async (find) => {
+  let searchFind  = `http://localhost:3000/ourProduct`;
+  let searchbar = document.querySelector('#searchinput')
+  if (find) {
+    searchFind += `/title/${find}`;
+    window.style.display = 'block';
+  }
+  try {
+      const response = await fetch(searchFind)
+      const searchLists = await response.json()
+      searchPage = ''
+      searchLists.forEach((list) => {
+          let {id , title } = list;
+          searchPage += `
+      <option value="${id}">${title}</option>
+      `
+
+          searchbar.innerHTML = searchPage
+
+      });
+
+
+  } catch (error) {
+      console.log(error)
+  }
+
+};
+search()
 
 
 // HERO SECTION BUTTON
@@ -158,9 +190,11 @@ const imageDisplay = async () => {
 
 
 
-const products = async () => {
+const products = async (find) => {
+  let productData = ` http://localhost:3000/ourProduct`;
+  
   try {
-    let productData = ` http://localhost:3000/ourProduct`;
+
 
     const response = await fetch(productData);
     const products = await response.json();
@@ -192,23 +226,17 @@ const products = async () => {
       productFrame.innerHTML = productsElem;
     });
 
+    showMore.addEventListener
+      ('click', () => {
+        window.location = './shop.html'
+      });
 
 
   } catch (error) {
     console.log(error)
   }
 
-
-
-
-}
-
-showMore.addEventListener
-  ('click', () => {
-    window.location = './shop.html'
-  });
-
-
+};
 
 // FURNIRO FORNITURE SHOWROOM AND
 
@@ -300,11 +328,9 @@ const postlists = async () => {
     });
   } catch (error) {
     console.log(error)
-  }
+  };
 
-}
-
-
+};
 
 // FOOTER LI 2
 let footer2 = `http://localhost:3000/footerLi2`;
@@ -327,9 +353,9 @@ const postlists2 = async () => {
     });
   } catch (error) {
     console.log(error)
-  }
+  };
 
-}
+};
 
 
 

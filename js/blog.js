@@ -194,10 +194,37 @@ searchImage.addEventListener("submit", async (e) => {
     e.preventDefault();
      const term  = e.currentTarget.search.value;
      
-     blogContentWrapper(term);
+     search(term);
  });
 
-
+ const search = async (term) => {
+    let searchFind  = `http://localhost:3000/blog`;
+    let searchbar = document.querySelector('#search')
+    if (term) {
+      searchFind += `/category/${term}`;
+      window.style.display = 'block';
+    }
+    try {
+        const response = await fetch(searchFind)
+        const searchLists = await response.json()
+        searchPage = ''
+        searchLists.forEach((list) => {
+            let {id , category:{store, portfolio} } = list;
+            searchPage += `
+        <option value="${id}">${store}</option>
+        `
+  
+            // searchbar.innerHTML = searchPage
+  
+        });
+  
+  
+    } catch (error) {
+        console.log(error)
+    }
+  
+  };
+  search()
 
 const catalogs = async () => {
     let catalogData = `http://localhost:3000/categories`
