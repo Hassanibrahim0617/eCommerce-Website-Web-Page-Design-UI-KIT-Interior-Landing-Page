@@ -212,32 +212,73 @@ const products = async () => {
 
         let elem = "";
         products.forEach((product) => {
+            // const initialPrice = products.price*2;
             let { id, image, title, body, price, discountedPrice, newProduct, percentage } = product;
 
 
             elem += ` 
-                       
+                <a href=./singleProduct2.html?id=${id}>
 
-                        <div class="product_card">
-                            <div class="product_image">
-                                <img src="${image}" alt="${title}">
-                                <div class="discount">${percentage}</div>
+                    <div class="product_card">
+                        <div class="product_image">
+                            <img src="${image}" alt="${title}">
+                            <div class="discount">${percentage}</div>
                                 <!--<div class="new">${newProduct}</div>-->
+                                
+                                <!-- overlay start-->
+                            <div class="product-pop-up">
+                                <div class="overlay">
+                                    <div class="button-container">
+                                        <button type="submit">Add to cart
+                                    
+                                        </button>
+                                    </div>
+                                    <div class="overlay-frame">
+                                        <div class="overlay-icons">
+                                            <a href="#">
+                                                <i class='fa fa-share-alt'></i>                   
+                                                <div class="share">Share</div>
+                                            </a>
+                                        </div>
+                                        <div class="overlay-icons">
+                                            <a href="#">
+                                                <i class='fa fa-exchange' ></i>
 
+                                    
+                                                <div class="compare">Compare</div>
+                                            </a>
+                                        </div>
+                                        <div class="overlay-icons">
+                                            <a href="#">
+                                                <i class='fa fa-heart-o'></i>
+                                                <div class="like">Like</div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
+                        </div>
+
+                            
+                                
                             <div class="product_meta">
+                            
+        
                                 <h3>${title}</h3>
                                 <h6>${body}</h6>
                                 <h6 class="price">${discountedPrice} <small>${price}</small> </h6>
                                 
                             </div>
-                                            
-    
-                        </div>  
-                         
-                       
+                                                
+        
+                           
+                                
+                    </div>  
+                            
+                </a>
                                                      
-                    `
+                    `;
 
 
             shopPage.innerHTML = elem;
@@ -245,17 +286,14 @@ const products = async () => {
 
         });
         shopPage.addEventListener('click', () =>{
-            window.location = './singleshop.html';
+            window.location = './singleProduct2.html';
         })
 
     } catch (error) {
         console.log(error)
     }
-
-
-
-
 };
+
 
 window.addEventListener('DOMContentLoaded', async () => products());
 window.addEventListener('DOMContentLoaded', async () => postlists());
