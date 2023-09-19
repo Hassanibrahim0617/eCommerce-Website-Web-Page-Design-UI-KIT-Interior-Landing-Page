@@ -54,6 +54,7 @@ function rightNavLinks() {
 
 
 
+
 let singleProduct = new URLSearchParams(window.location.search).get('id')
 let baseUrl = `http://localhost:3000/shop/${singleProduct}`
 console.log(singleProduct);
@@ -69,7 +70,7 @@ async function getimage(){
     try {let response = await fetch(baseUrl);
             let data = await response.json()
            
-          let { id,image,title,price,product_detail,
+          let { id,image,title,price,discountedPrice,product_detail,
              description:{ product_description1, product_description2},
             Tag,category, rating:{rate,review}}=data;
 
@@ -83,7 +84,7 @@ async function getimage(){
         <div class="product_details">
             <div class = "product_heading">
                 <h1 class="product_name">${title}</h1>
-                <h6 class="price">${price}</h6>
+                <h6 class="price">${discountedPrice} <small>${price}</small> </h6>
             </div>
 
             <div class="product_review">
@@ -155,17 +156,18 @@ window.addEventListener('DOMContentLoaded', getimage())
 // });
 
 
+
     
 
-let addToCart = document.querySelector('.addToCart .quantity');
-addToCart.addEventListener('click', ()=>{
-    window.location='./cart.html';
-});
+// let addToCart = document.querySelector('.addToCart .quantity');
+// addToCart.addEventListener('click', ()=>{
+//     window.location='./cart.html';
+// });
 
-let compareProduct = document.querySelector('.addToCart .compare');
-addToCart.addEventListener('click', ()=>{
-    window.location='./compare.html';
-});
+// let compareProduct = document.querySelector('.addToCart .compare');
+// addToCart.addEventListener('click', ()=>{
+//     window.location='./compare.html';
+// });
 
 
 
@@ -226,8 +228,8 @@ const shopPage = document.querySelector('.shopFrame');
       
     const products = async () =>{
         try{
-            let productData =`http://localhost:3000/shop`;
-        
+            let productData =`http://localhost:3000/shop/`;
+        console.log(productData)
             const response = await fetch(productData);
             const products = await response.json();
 
@@ -238,14 +240,49 @@ const shopPage = document.querySelector('.shopFrame');
                         
                 elem +=` 
                        
-
-                            <div class="product_card">
+                <a href=./singleProduct2.html?id=${id}>
+                    <div class="product_card">
                                 <div class="product_image">
                                     <img src="${image}" alt="${title}">
                                     <div class="discount">${percentage}</div>
                                     <!--<div class="new">${newProduct}</div>-->
+                                <!-- overlay start-->
+                            <div class="product-pop-up">
+                                <div class="overlay">
+                                    <div class="button-container">
+                                        <button type="submit">Add to cart
+                                    
+                                        </button>
+                                    </div>
+                                    <div class="overlay-frame">
+                                        <div class="overlay-icons">
+                                            <a href="#">
+                                                <i class='fa fa-share-alt'></i>                   
+                                                <div class="share">Share</div>
+                                            </a>
+                                        </div>
+                                        <div class="overlay-icons">
+                                            <a href="#">
+                                                <i class='fa fa-exchange' ></i>
+
+                                    
+                                                <div class="compare">Compare</div>
+                                            </a>
+                                        </div>
+                                        <div class="overlay-icons">
+                                            <a href="#">
+                                                <i class='fa fa-heart-o'></i>
+                                                <div class="like">Like</div>
+                                            </a>
+                                        </div>
+                                    </div>
 
                                 </div>
+                            </div>
+                        </div>
+
+                                
+                                
                                 <div class="product_meta">
                                     <h3>${title}</h3>
                                     <h6>${body}</h6>
@@ -254,9 +291,9 @@ const shopPage = document.querySelector('.shopFrame');
                                 </div>
                                                 
         
-                            </div>  
+                </div>  
                          
-                       
+                </a>       
                                                      
                     `
                           
@@ -265,6 +302,7 @@ const shopPage = document.querySelector('.shopFrame');
                 
 
                 }) 
+
                               
                 }catch(error) {
                     console.log(error)
@@ -273,7 +311,7 @@ const shopPage = document.querySelector('.shopFrame');
             
        
 
-    }  
+    } 
 
       window.addEventListener('DOMContentLoaded',async () => products())
 
